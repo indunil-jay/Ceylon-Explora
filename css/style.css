@@ -895,6 +895,73 @@ a {
 .section__footer {
   grid-column: full-start/full-end; }
 
+.footer {
+  background-image: linear-gradient(to bottom right, var(--color-primary-500), var(--color-primary-900));
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  padding: 4rem 5rem; }
+  .footer__left {
+    border-right: 2px solid var(--color-primary-50);
+    text-align: start;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .footer__text {
+    color: var(--color-primary-50);
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-style: italic; }
+  .footer__picture img {
+    width: 20rem;
+    height: 1/0.8; }
+  .footer__copy {
+    margin-top: 4rem; }
+    .footer__copy p {
+      color: var(--color-primary-100);
+      font-weight: 400;
+      font-size: 1.2rem;
+      text-transform: capitalize; }
+  .footer__right {
+    padding-inline: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    grid-template-rows: auto; }
+  .footer__nav h3, .footer__pages h3, .footer__service h3 {
+    color: var(--color-primary-100);
+    font-size: 2rem;
+    font-weight: 400;
+    border-bottom: 3px solid var(--color-primary-100);
+    width: 60%; }
+  .footer__nav a, .footer__pages a, .footer__service a {
+    text-decoration: none;
+    display: block; }
+  .footer__nav p,
+  .footer__nav a, .footer__pages p,
+  .footer__pages a, .footer__service p,
+  .footer__service a {
+    font-size: 1.4rem;
+    color: var(--color-primary-200);
+    font-weight: 300;
+    letter-spacing: 1.1px;
+    margin-top: 1.2rem;
+    padding: 0.4rem 0;
+    width: auto;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    width: 60%; }
+    .footer__nav p:hover,
+    .footer__nav a:hover, .footer__pages p:hover,
+    .footer__pages a:hover, .footer__service p:hover,
+    .footer__service a:hover {
+      font-size: 1.42rem;
+      color: var(--color-primary-100);
+      font-weight: 400;
+      border-bottom: 1px solid var(--color-primary-200); }
+
 .landing {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(0, 129, 89, 0.6), rgba(40, 223, 153, 0.8)), url(../../images/locations/colombo.jpg);
