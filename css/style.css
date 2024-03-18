@@ -106,7 +106,9 @@
   --box-shadow-type-5: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
     rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
   --box-shadow-type-6: rgba(50, 50, 105, 0.35) 0px 2px 5px 0px,
-    rgba(0, 0, 0, 0.25) 0px 1px 1px 0px; }
+    rgba(0, 0, 0, 0.25) 0px 1px 1px 0px;
+  --box-shadow-type-7: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; }
 
 *,
 *::after,
@@ -686,6 +688,109 @@ a {
     transform: scale(1.03);
     fill: var(--color-primary-500); }
 
+.connect-with-us-form {
+  margin-top: var(--space-lg-1);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: var(--grid-gap-1); }
+  .connect-with-us-form__company {
+    padding: var(--space-lg-3) var(--space-md-3);
+    border-radius: var(--border-radius-x1);
+    box-shadow: var(--box-shadow-type-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap-2); }
+    .connect-with-us-form__company-row {
+      border-bottom: 1px solid var(--color-primary-700);
+      cursor: pointer; }
+    .connect-with-us-form__company-social {
+      margin: var(--space-sm-2) 0; }
+    .connect-with-us-form__company-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      gap: var(--grid-gap-4); }
+    .connect-with-us-form__company-link {
+      display: grid;
+      place-items: center;
+      width: 4rem;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: transparent;
+      transition: var(--transition-mode-4); }
+      .connect-with-us-form__company-link:hover {
+        background-color: var(--color-primary-100); }
+    .connect-with-us-form__company-icon {
+      display: inline-block;
+      width: 2.4rem;
+      aspect-ratio: 1/1;
+      fill: var(--color-primary-500); }
+  .connect-with-us-form__form {
+    border-radius: var(--border-radius-x1);
+    padding: 5rem;
+    box-shadow: var(--box-shadow-type-2); }
+  .connect-with-us-form__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .connect-with-us-form__row:not(:last-child) {
+      margin-bottom: var(--space-sm-2); }
+  .connect-with-us-form__group:not(:last-child) {
+    margin-bottom: var(--space-sm-1); }
+  .connect-with-us-form__group--textarea {
+    grid-column: 1/-1; }
+  .connect-with-us-form__label {
+    display: block;
+    font-size: var(--font-sm-1);
+    font-weight: 400;
+    color: var(--color-primary-800);
+    cursor: pointer; }
+  .connect-with-us-form__input {
+    font-size: var(--font-default);
+    font-family: inherit;
+    color: inherit;
+    padding: var(--space-sm-1) var(--space-sm-2);
+    border: none;
+    border-radius: var(--border-radius-x1);
+    border: 1px solid var(--color-primary-800);
+    width: 90%;
+    transition: var(--transition-mode-2); }
+    .connect-with-us-form__input:focus {
+      outline: none;
+      box-shadow: var(--box-shadow-type-7);
+      border: 1px solid var(--color-primary-900); }
+    .connect-with-us-form__input:focus:invalid {
+      border-bottom: 0.3rem solid var(--color-error-500); }
+    .connect-with-us-form__input:focus:valid {
+      border-bottom: 0.3rem solid var(--color-succss-500); }
+    .connect-with-us-form__input::-webkit-input-placeholder {
+      color: var(--color-primary-900);
+      opacity: 0.3;
+      font-weight: 300; }
+  .connect-with-us-form__textarea {
+    width: 95%; }
+
+.formBtnContainer {
+  text-align: center; }
+
+.btn__form {
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-50);
+  font-size: var(--font-default);
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: inline-block;
+  padding: var(--space-xsm-3) var(--space-md-1);
+  border-radius: 6px;
+  box-shadow: var(--box-shadow-type-2);
+  transition: var(--transition-mode-2);
+  transform: scale(1); }
+
+.btn__form:hover {
+  box-shadow: var(--box-shadow-type-6);
+  transform: scale(1.02); }
+
 .header {
   background-color: var(--color-primary-50);
   grid-column: center-start/center-end;
@@ -781,11 +886,11 @@ a {
   grid-column: full-start/full-end; }
 
 .section__testimonial {
-  grid-column: center-start/center-end;
-  margin-bottom: 10rem; }
+  grid-column: center-start/center-end; }
 
 .section__connect-with-us {
-  grid-column: center-start/center-end; }
+  grid-column: center-start/center-end;
+  margin-bottom: 10rem; }
 
 .section__footer {
   grid-column: full-start/full-end; }
