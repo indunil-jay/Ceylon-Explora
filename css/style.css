@@ -57,39 +57,13 @@
   --margin-bottom-xsm: 1rem;
   --padding-horizontal-1: 1.8rem;
   --padding-horizontal-2: 3rem;
-  --padding-vertical-1: 0.4rem;
+  --padding-vertical-1: 0.5rem;
   --padding-vertical-2: 2rem;
   --letter-spacing-default: 1;
   --letter-spacing-sm: 1.2;
   --transition-mode-1: 0.2s all;
   --transition-mode-2: 0.3s all;
   --transition-mode-3: 0.4s all; }
-
-.btn {
-  border-radius: 0.3rem;
-  backface-visibility: hidden;
-  padding: var(--padding-vertical-2) var(--padding-horizontal-2);
-  color: var(--color-primary-100); }
-  .btn__outline {
-    border: 1px solid var(--color-primary-800);
-    transition: var(--transition-mode-2); }
-    .btn__outline:hover {
-      border: 1px solid var(--color-primary-900);
-      transform: scale(1.01); }
-  .btn__fill {
-    background-color: var(--color-primary-400);
-    color: var(--color-primary-50);
-    transition: var(--transition-mode-2); }
-    .btn__fill:hover {
-      background-color: var(--color-primary-500);
-      color: var(--color-primary-50); }
-  .btn__transparent {
-    background-color: transparent;
-    color: var(--color-primary-800);
-    transition: var(--transition-mode-2); }
-    .btn__transparent:hover {
-      background-color: var(--color-primary-500);
-      color: var(--color-primary-50); }
 
 *,
 *::after,
@@ -112,7 +86,8 @@ body {
 .container {
   display: grid;
   grid-template-rows: auto min-content;
-  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 15.5rem) [col-end]) [center-end] 1fr [full-end]; }
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 15.5rem) [col-end]) [center-end] 1fr [full-end];
+  position: relative; }
 
 body {
   font-family: "Geologica", sans-serif;
@@ -144,6 +119,78 @@ a {
     font-size: 1.4rem; }
   .paragraph--p3 {
     font-size: 1.2rem; }
+
+.btn {
+  border-radius: 0.3rem;
+  backface-visibility: hidden;
+  padding: var(--padding-vertical-2) var(--padding-horizontal-2);
+  color: var(--color-primary-100); }
+  .btn__outline {
+    border: 1px solid var(--color-primary-800);
+    transition: var(--transition-mode-2); }
+    .btn__outline:hover {
+      border: 1px solid var(--color-primary-900);
+      transform: scale(1.01); }
+  .btn__fill {
+    background-color: var(--color-primary-400);
+    color: var(--color-primary-50);
+    transition: var(--transition-mode-2); }
+    .btn__fill:hover {
+      background-color: var(--color-primary-500);
+      color: var(--color-primary-50); }
+  .btn__transparent {
+    background-color: transparent;
+    color: var(--color-primary-800);
+    transition: var(--transition-mode-2); }
+    .btn__transparent:hover {
+      background-color: var(--color-primary-500);
+      color: var(--color-primary-50); }
+
+.moreContainer {
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 15.5rem) [col-end]) [center-end] 1fr [full-end];
+  display: none;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -26%);
+  background-color: var(--color-primary-50);
+  border-radius: 10px;
+  height: min-content;
+  width: 120rem;
+  z-index: 999; }
+  .moreContainer__contentBox {
+    grid-column: center-start/center-end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding: 1.5rem 3rem; }
+  .moreContainer__box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start; }
+  .moreContainer__icon {
+    align-self: center; }
+    .moreContainer__icon img {
+      width: 8rem;
+      aspect-ratio: 1/1; }
+  .moreContainer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start; }
+  .moreContainer__btn {
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition-mode-1); }
+    .moreContainer__btn:hover {
+      border-bottom: 1px solid var(--color-primary-800);
+      font-weight: 700; }
 
 .header {
   background-color: var(--color-primary-50);
@@ -210,7 +257,7 @@ a {
         transform: scale(1.05); }
 
 .main {
-  grid-row: 2/3;
+  grid-row: 1/3;
   grid-column: full-start/full-end;
   display: grid;
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
