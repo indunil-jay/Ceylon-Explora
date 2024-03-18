@@ -1,0 +1,38 @@
+.banner {
+  background-color: var(--color-primary-500);
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: var(--space-lg-2);
+
+  &__details {
+    color: var(--color-primary-50);
+  }
+  &__heading,
+  &__text {
+    width: 70%;
+  }
+
+  &__button {
+    display: grid;
+    place-items: center;
+  }
+
+  &__btn {
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-800);
+    font-weight: 400;
+    font-size: var(--font-h3);
+    border: none;
+
+    box-shadow: var(--box-shadow-type-5);
+    transition: var(--transition-mode-2);
+
+    &:hover {
+      transform: scale(1.02);
+      font-size: 2.05rem;
+      box-shadow: var(--box-shadow-type-6);
+    }
+  }
+}

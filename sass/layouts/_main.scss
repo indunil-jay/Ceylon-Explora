@@ -26,4 +26,27 @@
   &__packages {
     grid-column: center-start/center-end;
   }
+  &__services {
+    grid-column: center-start/center-end;
+  }
+  &__why-choose-us {
+    grid-column: full-start/full-end;
+  }
+  &__our-team {
+    grid-column: center-start/center-end;
+  }
+
+  &__banner {
+    grid-column: full-start/full-end;
+  }
+
+  &__testimonial {
+    grid-column: center-start/center-end;
+  }
+  &__connect-with-us {
+    grid-column: center-start/center-end;
+  }
+  &__footer {
+    grid-column: full-start/full-end;
+  }
 }

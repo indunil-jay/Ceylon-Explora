@@ -38,6 +38,10 @@
   --color-succss-400: rgb(130, 221, 85);
   --color-succss-500: rgb(84, 191, 35);
 
+  --font-xsm-1: 1.2rem;
+  --font-xsm-2: 1.3rem;
+  --font-sm-1: 1.4rem;
+  --font-sm-2: 1.5rem;
   --font-default: 1.6rem;
   --font-h1: 5rem;
   --font-h2: 3.6rem;
@@ -49,9 +53,11 @@
   --paragraph-p3: 1.2rem;
 
   --line-height-default: 1.6;
+  --line-height-xsm: 0.8;
   --line-height-sm: 1.4;
   --line-height-md: 1.7;
 
+  // need to be refactor
   --margin-xsm: 2rem;
   --margin-sm: 3rem;
   --margin-md: 6rem;
@@ -59,16 +65,36 @@
   --margin-lg-x2: 12rem;
   --margin-lg-x3: 16rem;
   --margin-lg-x4: 20rem;
-
+  // need to be refactor
   --margin-right-xsm: 0.5rem;
+  --margin-right-sm: 0.7rem;
   --margin-bottom-xsm: 1rem;
 
+  // need to be refactor
   --padding-horizontal-1: 1.8rem;
   --padding-horizontal-2: 3rem;
-
+  --padding-horizontal-3: 6rem;
+  // need to be refactor
   --padding-vertical-1: 0.5rem;
   --padding-vertical-2: 2rem;
   --padding-vertical-3: 4rem;
+  --padding-vertical-4: 1rem;
+
+  --space-xsm-1: 0.5rem;
+  --space-xsm-2: 0.75rem;
+  --space-xsm-3: 1rem;
+  --space-sm-1: 1.5rem;
+  --space-sm-2: 2rem;
+  --space-sm-3: 2.5rem;
+  --space-md-1: 3rem;
+  --space-md-2: 4rem;
+  --space-md-3: 5rem;
+  --space-lg-1: 6rem;
+  --space-lg-2: 8rem;
+  --space-lg-3: 10rem;
+  --space-xlg-1: 12rem;
+  --space-xlg-2: 16rem;
+  --space-xlg-3: 20rem;
 
   --letter-spacing-default: 1;
   --letter-spacing-sm: 1.2;
@@ -76,13 +102,26 @@
   --transition-mode-1: 0.2s all;
   --transition-mode-2: 0.3s all;
   --transition-mode-3: 0.4s all;
+  --transition-mode-4: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 
+  --grid-gap-0: 1rem;
   --grid-gap-1: 2rem;
   --grid-gap-2: 4rem;
   --grid-gap-3: 6rem;
+  --grid-gap-4: 1.75rem;
 
+  --border-radius-x0: 0.3rem;
   --border-radius-x1: 0.5rem;
+  --border-radius-x2: 0.8rem;
+  --border-radius-x3: 1rem;
+  --border-radius-xlg: 10rem;
 
   --box-shadow-type-1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --box-shadow-type-2: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  --box-shadow-type-3: rgb(38, 57, 77) 0px 20px 30px -10px;
+  --box-shadow-type-4: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow-type-5: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  --box-shadow-type-6: rgba(50, 50, 105, 0.35) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.25) 0px 1px 1px 0px;
 }

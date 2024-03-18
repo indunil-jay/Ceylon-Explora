@@ -1,0 +1,97 @@
+.our-team {
+  &__teamContainer {
+    padding: var(--space-lg-2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;
+    grid-gap: var(--grid-gap-1);
+    position: relative;
+  }
+
+  &__card {
+    padding-bottom: var(--space-xsm-3);
+    background-color: var(--color-primary-500);
+    position: relative;
+    display: grid;
+    place-items: center;
+    box-shadow: var(--box-shadow-type-3);
+  }
+
+  &__photo {
+    position: relative;
+    img {
+      width: 200px;
+      height: 280px;
+      object-fit: cover;
+      filter: grayscale(100%) contrast(120%);
+      box-shadow: var(--box-shadow-type-3);
+      display: block;
+      transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+      margin-top: calc(0px - var(--space-xsm-3));
+    }
+  }
+
+  &__photo:hover img {
+    box-shadow: var(--box-shadow-type-4);
+  }
+
+  &__photo .glow-wrap {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: calc(0px - var(--space-xsm-3));
+  }
+
+  &__photo .glow {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    top: 0;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: var(--transition-mode-4);
+  }
+
+  &__photo:hover .glow {
+    transform: rotate(45deg) translate(450%, 0);
+    transition: var(--transition-mode-4);
+  }
+
+  &__photo:hover img,
+  &__photo:hover .glow-wrap {
+    margin-top: 0;
+    filter: none;
+  }
+
+  &__name {
+    width: 100%;
+    font-size: var(--font-h1);
+    position: absolute;
+    z-index: 99;
+    bottom: 10%;
+    right: 50%;
+    transform: translate(50%, -10%);
+    color: var(--color-primary-50);
+    margin: 0;
+    line-height: var(--line-height-xsm);
+    z-index: 25;
+  }
+
+  &__tag {
+    display: inline-block;
+    padding: var(--space-xsm-1) var(--space-sm-2);
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--color-primary-500);
+    border-radius: var(--border-radius-xlg);
+    color: var(--color-primary-400);
+    font-size: var(--font-xsm-1);
+    position: absolute;
+    z-index: 15;
+    bottom: 0.5rem;
+    right: 0.5rem;
+  }
+}

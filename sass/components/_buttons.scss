@@ -1,7 +1,7 @@
 .btn {
-  border-radius: 0.3rem;
+  border-radius: var(--border-radius-x0);
   backface-visibility: hidden;
-  padding: var(--padding-vertical-2) var(--padding-horizontal-2);
+  padding: var(--space-sm-2) var(--space-md-1);
   color: var(--color-primary-100);
   box-shadow: var(--box-shadow-type-1);
 
@@ -50,5 +50,35 @@
       font-size: 1.62rem;
       font-weight: 700;
     }
+  }
+
+  &__rightWave {
+    color: var(--color-primary-500);
+    border: 2px solid var(--color-primary-300);
+    border-radius: var(--border-radius-x0);
+    font-weight: 300;
+    padding: 1.2rem 2.6rem;
+    transition: var(--transition-mode-3);
+    position: relative;
+    z-index: 100;
+
+    &:hover {
+      color: var(--color-primary-50);
+      border: none;
+    }
+    &:hover::after {
+      background-color: var(--color-primary-300);
+      width: 100%;
+    }
+  }
+  &__rightWave::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: var(--transition-mode-1);
   }
 }
