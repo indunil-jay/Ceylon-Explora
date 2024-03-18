@@ -44,3 +44,16 @@
     }
   }
 }
+
+.packages {
+  margin-top: 12rem;
+  text-align: center;
+
+  &__heading {
+    display: block;
+  }
+
+  &__text {
+    white-space: break-word;
+  }
+}

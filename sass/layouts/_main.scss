@@ -22,4 +22,8 @@
   &__landing {
     grid-column: full-start/full-end;
   }
+
+  &__packages {
+    grid-column: center-start/center-end;
+  }
 }
