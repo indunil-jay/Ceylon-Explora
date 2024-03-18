@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
+
+body {
+  font-family: "Geologica", sans-serif;
+  font-weight: 400;
+  line-height: var(--line-height-default);
+  color: var(--color-primary-900);
+}
+
+a {
+  text-decoration: none;
+  font-size: var(--font-default);
+  font-weight: 300;
+  text-transform: capitalize;
+  color: inherit;
+}

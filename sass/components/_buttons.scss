@@ -1,0 +1,20 @@
+.btn {
+  &__outline {
+    border: 2px solid var(--color-primary-100);
+    transition: var(--transition-mode-2);
+    backface-visibility: hidden;
+
+    &:hover {
+      border: 2px solid var(--color-primary-50);
+      transform: scale(1.02);
+    }
+  }
+
+  &__fill {
+    background-color: var(--color-primary-500);
+    transition: var(--transition-mode-2);
+    &:hover {
+      background-color: var(--color-primary-600);
+    }
+  }
+}
