@@ -1,12 +1,13 @@
 .header {
-  background-color: black;
+  // background-color: black;
   grid-column: center-start/center-end;
   grid-row: 1/2;
-  border-bottom: 2px solid var(--color-primary-100);
-  color: var(--color-primary-100);
+  border-bottom: 2px solid var(--color-primary-800);
+  color: var(--color-primary-700);
   padding: var(--padding-vertical-1) var(--padding-horizontal-1);
   display: grid;
   grid-template-columns: 1fr 3fr;
+  margin-bottom: var(--margin-bottom-xsm);
 
   &__logoContainer {
     width: 100%;
@@ -32,17 +33,24 @@
 
       &__item {
         padding: var(--padding-vertical-1) var(--padding-horizontal-1);
+        transition: var(--transition-mode-2);
 
         &:not(:last-child) {
           margin-right: var(--margin-right-xsm);
         }
       }
+
       &__down__icon {
         width: 2.4rem;
         height: 2.4rem;
-        fill: var(--color-primary-100);
+        fill: var(--color-primary-900);
         position: relative;
         top: 6px;
+        transition: var(--transition-mode-2);
+
+        &:hover {
+          fill: var(--color-primary-950);
+        }
       }
 
       &__link {
@@ -55,22 +63,22 @@
       }
 
       &__link--normal:hover {
-        color: var(--color-primary-50);
+        color: var(--color-primary-900);
         font-weight: 500;
         font-size: 1.62rem;
       }
-      &__link--btn:hover {
-        background-color: var(--color-primary-600);
+      &__link--btn {
+        font-weight: 400;
       }
 
       .theme__icon {
         width: 2.8rem;
         height: 2.8rem;
-        fill: var(--color-primary-100);
+        fill: var(--color-primary-900);
         transition: var(--transition-mode-2);
       }
       .theme__icon:hover {
-        fill: var(--color-primary-50);
+        fill: var(--color-primary-950);
         transform: scale(1.05);
       }
     }
