@@ -6,6 +6,10 @@
   grid-template-columns: 3fr 1fr;
   padding: var(--space-lg-2);
 
+  @include respond(mobile-xl) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   &__details {
     color: var(--color-primary-50);
   }
@@ -26,6 +30,10 @@
   &__button {
     display: grid;
     place-items: center;
+    @include respond(mobile-xl) {
+      display: flex;
+      margin-top: 4rem;
+    }
   }
 
   &__btn {

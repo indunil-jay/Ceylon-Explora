@@ -26,6 +26,11 @@ $break-point arguments
       @content;
     }
   }
+  @if $break-point == mobile-xl {
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  }
 
   //   @if $break-point ==tab-land {
   //     @media only screen and (max-width: 75em) {

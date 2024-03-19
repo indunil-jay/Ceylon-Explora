@@ -4,24 +4,34 @@
   grid-template-rows: auto;
   grid-gap: var(--grid-gap-3);
   border-radius: var(--border-radius-x1);
-  padding: var(--space-md-2) var(--space-md-1);
-  margin: var(--margin-md) 0;
+  padding: var(--space-md-2);
+  margin: var(--margin-md) 0px;
 
   @include respond(tab-port) {
-    grid-template-columns: repeat(2, 1fr);
-    padding-inline: var(--space-lg-3);
-    grid-column-gap: var(--grid-gap-5);
+    grid-template-columns: repeat(2, 34rem);
+    justify-content: space-around;
   }
-
+  @include respond(mobile-xl) {
+    grid-template-columns: repeat(1, 38rem);
+  }
   .card:nth-child(3) {
     @include respond(tab-port) {
       grid-column: span 2;
       justify-self: center;
+      width: 34rem;
+    }
+    @include respond(mobile-xl) {
+      width: 38rem;
+      grid-column: 1/-1;
+      justify-self: center;
     }
   }
 
+  &__btn {
+    margin-top: 4rem;
+  }
+
   .card {
-    width: 40rem;
     border-radius: var(--border-radius-x1);
     box-shadow: var(--box-shadow-type-1);
     background-color: var(--color-white);
@@ -121,7 +131,7 @@
       align-items: center;
     }
     &__data svg {
-      margin-right: var(--space-xsm-2);
+      margin-right: var(--space-xsm-1);
     }
     &__icon {
       height: 2rem;

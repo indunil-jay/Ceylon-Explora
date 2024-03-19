@@ -122,6 +122,12 @@ html {
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
+  @media only screen and (max-width: 64.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 50em) {
+    html {
+      font-size: 46%; } }
 
 body {
   box-sizing: border-box;
@@ -281,19 +287,28 @@ a {
   grid-template-rows: auto;
   grid-gap: var(--grid-gap-3);
   border-radius: var(--border-radius-x1);
-  padding: var(--space-md-2) var(--space-md-1);
-  margin: var(--margin-md) 0; }
+  padding: var(--space-md-2);
+  margin: var(--margin-md) 0px; }
   @media only screen and (max-width: 64.25em) {
     .pricing {
-      grid-template-columns: repeat(2, 1fr);
-      padding-inline: var(--space-lg-3);
-      grid-column-gap: var(--grid-gap-5); } }
+      grid-template-columns: repeat(2, 34rem);
+      justify-content: space-around; } }
+  @media only screen and (max-width: 50em) {
+    .pricing {
+      grid-template-columns: repeat(1, 38rem); } }
   @media only screen and (max-width: 64.25em) {
     .pricing .card:nth-child(3) {
       grid-column: span 2;
+      justify-self: center;
+      width: 34rem; } }
+  @media only screen and (max-width: 50em) {
+    .pricing .card:nth-child(3) {
+      width: 38rem;
+      grid-column: 1/-1;
       justify-self: center; } }
+  .pricing__btn {
+    margin-top: 4rem; }
   .pricing .card {
-    width: 40rem;
     border-radius: var(--border-radius-x1);
     box-shadow: var(--box-shadow-type-1);
     background-color: var(--color-white);
@@ -360,7 +375,7 @@ a {
       display: flex;
       align-items: center; }
     .pricing .card__data svg {
-      margin-right: var(--space-xsm-2); }
+      margin-right: var(--space-xsm-1); }
     .pricing .card__icon {
       height: 2rem;
       width: 2rem;
@@ -451,6 +466,10 @@ a {
   position: relative;
   z-index: 5;
   align-self: center; }
+  @media only screen and (max-width: 50em) {
+    .services__picture {
+      width: 6rem;
+      aspect-ratio: 1/1; } }
 
 .services__icon {
   width: 4.5rem;
@@ -458,17 +477,29 @@ a {
   fill: var(--color-primary-50);
   position: relative;
   z-index: 55; }
+  @media only screen and (max-width: 50em) {
+    .services__icon {
+      width: 3.6rem;
+      height: 3.6rem; } }
 
 .services__text {
   display: flex;
   flex-direction: column;
-  margin-top: var(--margin-xsm); }
+  margin-top: var(--margin-xsm);
+  text-align: center; }
   .services__text--header {
     align-self: center;
     padding: var(--space-sm-1); }
+    @media only screen and (max-width: 50em) {
+      .services__text--header {
+        padding: var(--space-xsm-2); } }
   .services__text--para {
     align-self: center;
-    padding: 1.4rem 2.2rem; }
+    padding: var(--space-sm-1); }
+    @media only screen and (max-width: 50em) {
+      .services__text--para {
+        margin-top: -1rem;
+        padding: var(--space-xsm-2); } }
 
 .why-choose-us {
   display: grid;
@@ -479,6 +510,9 @@ a {
     text-align: start;
     display: grid;
     place-items: center; }
+    @media only screen and (max-width: 50em) {
+      .why-choose-us__content {
+        padding: var(--space-lg-1); } }
     @media only screen and (max-width: 75em) {
       .why-choose-us__content h2 {
         color: var(--color-primary-50);
@@ -503,15 +537,34 @@ a {
         padding: var(--space-sm-1); } }
   .why-choose-us__picture {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .why-choose-us__picture img {
+      width: 100%;
+      height: 100%; }
+      @media only screen and (max-width: 50em) {
+        .why-choose-us__picture img {
+          width: 20rem;
+          height: 20rem; } }
+    @media only screen and (max-width: 64.25em) {
+      .why-choose-us__picture {
+        width: 100%;
+        height: 100%; } }
 
 .our-team__teamContainer {
-  padding: var(--space-lg-2);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content;
   grid-gap: var(--grid-gap-1);
+  padding: var(--space-lg-2);
   position: relative; }
+  @media only screen and (max-width: 50em) {
+    .our-team__teamContainer {
+      grid-template-columns: repeat(1, 40rem);
+      grid-gap: var(--grid-gap-3);
+      justify-content: center; } }
 
 .our-team__card {
   padding-bottom: var(--space-xsm-3);
@@ -596,6 +649,9 @@ a {
   display: grid;
   grid-template-columns: 3fr 1fr;
   padding: var(--space-lg-2); }
+  @media only screen and (max-width: 50em) {
+    .banner {
+      grid-template-columns: repeat(1, 1fr); } }
   .banner__details {
     color: var(--color-primary-50); }
   @media only screen and (max-width: 75em) {
@@ -609,6 +665,10 @@ a {
   .banner__button {
     display: grid;
     place-items: center; }
+    @media only screen and (max-width: 50em) {
+      .banner__button {
+        display: flex;
+        margin-top: 4rem; } }
   .banner__btn {
     background-color: var(--color-primary-50);
     color: var(--color-primary-800);
@@ -631,6 +691,9 @@ a {
 .testimonial__slider {
   padding: var(--space-md-3);
   max-width: 80%; }
+  @media only screen and (max-width: 50em) {
+    .testimonial__slider {
+      max-width: 90%; } }
 
 .testimonial__slide {
   display: none; }
@@ -723,6 +786,10 @@ a {
     .testimonial__icon {
       width: 6.5rem;
       height: 6.5rem; } }
+  @media only screen and (max-width: 50em) {
+    .testimonial__icon {
+      width: 5rem;
+      height: 5rem; } }
   .testimonial__icon:hover {
     transform: scale(1.03);
     fill: var(--color-primary-500); }
@@ -735,6 +802,9 @@ a {
   @media only screen and (max-width: 75em) {
     .connect-with-us-form {
       margin-inline: 6rem; } }
+  @media only screen and (max-width: 50em) {
+    .connect-with-us-form {
+      grid-template-columns: 1fr; } }
   .connect-with-us-form__company {
     padding: var(--space-lg-2) var(--space-md-3);
     border-radius: var(--border-radius-x1);
@@ -742,6 +812,9 @@ a {
     display: flex;
     flex-direction: column;
     gap: var(--grid-gap-2); }
+    @media only screen and (max-width: 50em) {
+      .connect-with-us-form__company {
+        padding: var(--space-xlg-2); } }
     .connect-with-us-form__company-row {
       border-bottom: 1px solid var(--color-primary-700);
       cursor: pointer; }
@@ -841,6 +914,9 @@ a {
   position: fixed;
   right: 0;
   z-index: 999; }
+  @media only screen and (max-width: 50em) {
+    .sidebarContainer {
+      width: 40vw; } }
 
 .sidebar {
   display: flex;
@@ -916,7 +992,10 @@ a {
   margin-bottom: var(--space-xsm-3); }
   @media only screen and (max-width: 75em) {
     .header {
-      grid-column: full-start/full-end; } }
+      grid-column: full-start / full-end; } }
+  @media only screen and (max-width: 64.25em) {
+    .header {
+      grid-column: full-start / full-end; } }
   .header__logoContainer {
     width: 100%;
     height: 100%;
@@ -930,6 +1009,7 @@ a {
   .header__navContainer {
     width: 100%; }
     .header__navContainer .nav {
+      margin: 0 2rem;
       height: 100%;
       display: flex;
       justify-content: flex-end;
@@ -986,7 +1066,14 @@ a {
           left: 50%;
           transform: translate(-50%, 30%);
           font-weight: 500; }
+    .header__navContainer .nav__container {
+      height: 100%;
+      display: none; }
+      @media only screen and (max-width: 64.25em) {
+        .header__navContainer .nav__container {
+          display: block; } }
     .header__navContainer .nav__toggle {
+      margin: 0 2rem;
       height: 100%;
       display: flex;
       justify-content: flex-end;
@@ -1081,6 +1168,10 @@ a {
   @media only screen and (max-width: 75em) {
     .footer {
       padding: var(--space-sm-3) var(--space-md-2); } }
+  @media only screen and (max-width: 50em) {
+    .footer {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, min-content); } }
   .footer__left {
     border-right: 2px solid var(--color-primary-50);
     text-align: start;
@@ -1091,6 +1182,12 @@ a {
     @media only screen and (max-width: 75em) {
       .footer__left {
         padding: 0 var(--space-sm-1); } }
+    @media only screen and (max-width: 50em) {
+      .footer__left {
+        border-right: none;
+        grid-row: 2/-1;
+        align-items: center;
+        text-align: center; } }
   .footer__text {
     color: var(--color-primary-50);
     font-weight: 400;
@@ -1101,6 +1198,9 @@ a {
     height: 1/0.8; }
   .footer__copy {
     margin-top: var(--space-md-2); }
+    @media only screen and (max-width: 50em) {
+      .footer__copy {
+        margin: 0; } }
     .footer__copy p {
       color: var(--color-primary-100);
       font-weight: 400;
@@ -1112,6 +1212,17 @@ a {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: var(--grid-gap-1);
     grid-template-rows: auto; }
+    @media only screen and (max-width: 50em) {
+      .footer__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: var(--space-sm-3); } }
+  @media only screen and (max-width: 50em) {
+    .footer__nav, .footer__pages, .footer__service {
+      width: 30rem;
+      text-align: center; } }
   .footer__nav h3, .footer__pages h3, .footer__service h3 {
     color: var(--color-primary-100);
     font-size: var(--font-h3);
@@ -1119,6 +1230,9 @@ a {
     border-bottom: 3px solid var(--color-primary-100);
     width: 60%;
     margin-bottom: var(--space-xsm-2); }
+    @media only screen and (max-width: 50em) {
+      .footer__nav h3, .footer__pages h3, .footer__service h3 {
+        width: 100%; } }
   .footer__nav a, .footer__pages a, .footer__service a {
     text-decoration: none;
     display: block; }
@@ -1142,6 +1256,13 @@ a {
       .footer__pages a, .footer__service p,
       .footer__service a {
         padding: 0.3rem 0; } }
+    @media only screen and (max-width: 50em) {
+      .footer__nav p,
+      .footer__nav a, .footer__pages p,
+      .footer__pages a, .footer__service p,
+      .footer__service a {
+        width: 100%;
+        font-size: var(--font-sm-2); } }
     .footer__nav p:hover,
     .footer__nav a:hover, .footer__pages p:hover,
     .footer__pages a:hover, .footer__service p:hover,
@@ -1204,4 +1325,5 @@ a {
   .testimonial__text,
   .connect-with-us__text,
   .why-choose-us__text {
+    display: block;
     white-space: break-word; }

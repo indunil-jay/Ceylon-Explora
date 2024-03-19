@@ -10,7 +10,10 @@
   margin-bottom: var(--space-xsm-3);
 
   @include respond(tab-land) {
-    grid-column: full-start/full-end;
+    grid-column: full-start / full-end;
+  }
+  @include respond(tab-port) {
+    grid-column: full-start / full-end;
   }
 
   &__logoContainer {
@@ -31,6 +34,7 @@
     width: 100%;
 
     .nav {
+      margin: 0 2rem;
       height: 100%;
       display: flex;
       justify-content: flex-end;
@@ -111,7 +115,17 @@
       }
     }
 
+    .nav__container {
+      height: 100%;
+      display: none;
+
+      @include respond(tab-port) {
+        display: block;
+      }
+    }
+
     .nav__toggle {
+      margin: 0 2rem;
       height: 100%;
       display: flex;
       justify-content: flex-end;

@@ -13,9 +13,13 @@ html {
     font-size: 56.25%; // 1rem =9px
   }
 
-  // @include respond(tab-port) {
-  //   font-size: 50%; // 1rem =8px
-  // }
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem =8px
+  }
+
+  @include respond(mobile-xl) {
+    font-size: 46%; // 1rem =8px
+  }
 }
 
 body {
