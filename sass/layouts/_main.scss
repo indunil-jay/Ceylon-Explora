@@ -9,7 +9,7 @@
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end] 1fr[full-end];
-  grid-template-rows: 95vh repeat(9, min-content);
+  grid-template-rows: 95vh repeat(10, min-content);
 
   position: absolute;
   top: 0;
@@ -42,6 +42,10 @@
 
   &__banner {
     grid-column: full-start/full-end;
+    margin-top: 12rem;
+  }
+  &__blog {
+    grid-column: center-start/center-end;
     margin-top: 12rem;
   }
 

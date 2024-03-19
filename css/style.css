@@ -44,10 +44,6 @@
   --font-h1: 5rem;
   --font-h2: 3.8rem;
   --font-h3: 2.2rem;
-  --paragraph-default: 1rem;
-  --paragraph-p1: 1.8rem;
-  --paragraph-p2: 1.4rem;
-  --paragraph-p3: 1.2rem;
   --line-height-default: 1.6;
   --line-height-xsm: 0.8;
   --line-height-sm: 1.4;
@@ -1035,6 +1031,112 @@ a {
       height: 2.5rem;
       fill: var(--color-primary-800); }
 
+.blog__cards {
+  margin-block: var(--space-md-3);
+  display: grid;
+  grid-template-columns: repeat(3, 32rem);
+  grid-gap: var(--grid-gap-2);
+  justify-content: center; }
+  @media only screen and (max-width: 64.25em) {
+    .blog__cards {
+      grid-template-columns: repeat(2, 32rem); } }
+  @media only screen and (max-width: 50em) {
+    .blog__cards {
+      grid-template-columns: repeat(1, 32rem); } }
+
+@media only screen and (max-width: 64.25em) {
+  .blog__card:last-child {
+    grid-column: span 2;
+    justify-self: center; } }
+
+@media only screen and (max-width: 50em) {
+  .blog__card:last-child {
+    grid-column: 1/-1; } }
+
+.blog__card {
+  width: 32rem;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-x1);
+  box-shadow: var(--box-shadow-type-2);
+  cursor: pointer; }
+  .blog__card:hover {
+    box-shadow: var(--box-shadow-type-3); }
+
+.blog__picture {
+  width: 32rem;
+  height: 20rem;
+  border-top-left-radius: var(--border-radius-x1);
+  border-top-right-radius: var(--border-radius-x1);
+  position: relative;
+  overflow: hidden; }
+  .blog__picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: var(--border-radius-x1);
+    border-top-right-radius: var(--border-radius-x1);
+    transition: filter 0.3s ease; }
+    .blog__picture img:hover {
+      filter: blur(2px); }
+
+.blog__read-more {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-xsm-3) var(--space-sm-3);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: var(--border-radius-x1);
+  color: var(--color-primary-900);
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease, bottom 0.3s ease;
+  /* Add transitions */ }
+
+.blog__card:hover .blog__read-more {
+  opacity: 1;
+  bottom: 30%; }
+
+.blog__read-more:hover {
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-50); }
+
+.blog__picture img:hover {
+  filter: blur(3px); }
+
+.blog__details {
+  padding: var(--space-sm-2); }
+
+.blog__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-xsm-1); }
+
+.blog__textgroup {
+  display: flex;
+  margin: 0 auto;
+  gap: 0.5rem; }
+
+.blog__icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  fill: rgba(0, 0, 0, 0.3); }
+
+.blog__writer {
+  font-size: var(--font-sm-2);
+  font-weight: 300; }
+
+.blog__date {
+  font-size: var(--font-sm-1);
+  font-weight: 300; }
+
+.blog__title {
+  text-transform: capitalize; }
+
+.blog__text {
+  font-size: var(--font-xsm-2); }
+
 .header {
   background-color: var(--color-primary-50);
   grid-column: center-start/center-end;
@@ -1178,7 +1280,7 @@ a {
   grid-column: full-start/full-end;
   display: grid;
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
-  grid-template-rows: 95vh repeat(9, min-content);
+  grid-template-rows: 95vh repeat(10, min-content);
   position: absolute;
   top: 0;
   left: 0;
@@ -1206,6 +1308,10 @@ a {
 
 .section__banner {
   grid-column: full-start/full-end;
+  margin-top: 12rem; }
+
+.section__blog {
+  grid-column: center-start/center-end;
   margin-top: 12rem; }
 
 .section__testimonial {
@@ -1376,6 +1482,7 @@ a {
       border: 2px solid var(--color-primary-50);
       font-weight: 500; }
 
+.blog,
 .our-team,
 .packages,
 .services,
@@ -1383,6 +1490,7 @@ a {
 .connect-with-us,
 .why-choose-us {
   text-align: center; }
+  .blog__heading,
   .our-team__heading,
   .packages__heading,
   .services__heading,
@@ -1390,6 +1498,7 @@ a {
   .connect-with-us__heading,
   .why-choose-us__heading {
     display: block; }
+  .blog__text,
   .our-team__text,
   .packages__text,
   .services__text,
@@ -1399,6 +1508,7 @@ a {
     display: block;
     white-space: break-word; }
     @media only screen and (max-width: 36em) {
+      .blog__text,
       .our-team__text,
       .packages__text,
       .services__text,
