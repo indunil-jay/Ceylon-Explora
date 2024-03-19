@@ -694,7 +694,7 @@ a {
   grid-template-columns: 1fr 2fr;
   grid-gap: var(--grid-gap-1); }
   .connect-with-us-form__company {
-    padding: var(--space-lg-3) var(--space-md-3);
+    padding: var(--space-lg-2) var(--space-md-3);
     border-radius: var(--border-radius-x1);
     box-shadow: var(--box-shadow-type-2);
     display: flex;
@@ -728,7 +728,7 @@ a {
       fill: var(--color-primary-500); }
   .connect-with-us-form__form {
     border-radius: var(--border-radius-x1);
-    padding: 5rem;
+    padding: var(--space-md-2);
     box-shadow: var(--box-shadow-type-2); }
   .connect-with-us-form__row {
     display: grid;
