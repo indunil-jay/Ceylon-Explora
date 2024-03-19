@@ -35,7 +35,13 @@
     }
     @include respond(mobile) {
       margin-left: 0;
+      padding-inline: var(--space-md-2);
+      text-align: center;
     }
+    // @include respond(mobile-sm) {
+    //   padding-inline: var(--space-md-2);
+    //   text-align: center;
+    // }
   }
   &__heading {
     display: block;

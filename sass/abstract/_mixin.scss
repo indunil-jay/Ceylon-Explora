@@ -36,4 +36,9 @@ $break-point arguments
       @content;
     }
   }
+  @if $break-point == mobile-sm {
+    @media only screen and (max-width: 25em) {
+      @content;
+    }
+  }
 }

@@ -20,6 +20,9 @@ html {
   @include respond(mobile-xl) {
     font-size: 46%; // 1rem =8px
   }
+  @include respond(mobile-sm) {
+    font-size: 40%; // 1rem =8px
+  }
 }
 
 body {

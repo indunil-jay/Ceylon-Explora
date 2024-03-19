@@ -13,6 +13,13 @@
       grid-gap: var(--grid-gap-3);
       justify-content: center;
     }
+    @include respond(mobile) {
+      grid-template-columns: repeat(1, 36rem);
+      grid-gap: var(--grid-gap-2);
+    }
+    @include respond(mobile-sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__card {

@@ -132,6 +132,14 @@
       list-style: none;
       align-items: center;
 
+      &__group {
+        display: flex;
+
+        @include respond(mobile) {
+          display: none;
+        }
+      }
+
       &--user {
         position: relative;
       }
