@@ -51,7 +51,6 @@
 .testimonial,
 .connect-with-us,
 .why-choose-us {
-  margin-top: 12rem;
   text-align: center;
 
   &__heading {
@@ -61,9 +60,4 @@
   &__text {
     white-space: break-word;
   }
-}
-
-.banner,
-.footer {
-  margin-top: 12rem;
 }

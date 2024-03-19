@@ -25,29 +25,36 @@
 
   &__packages {
     grid-column: center-start/center-end;
+    margin-top: 12rem;
   }
   &__services {
     grid-column: center-start/center-end;
+    margin-top: 12rem;
   }
   &__why-choose-us {
     grid-column: full-start/full-end;
+    margin-top: 12rem;
   }
   &__our-team {
     grid-column: center-start/center-end;
+    margin-top: 12rem;
   }
 
   &__banner {
     grid-column: full-start/full-end;
+    margin-top: 12rem;
   }
 
   &__testimonial {
     grid-column: center-start/center-end;
+    margin-top: 12rem;
   }
   &__connect-with-us {
     grid-column: center-start/center-end;
-    margin-bottom: 10rem;
+    margin-top: 12rem;
   }
   &__footer {
     grid-column: full-start/full-end;
+    margin-top: 12rem;
   }
 }

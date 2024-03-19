@@ -895,29 +895,36 @@ a {
   grid-column: full-start/full-end; }
 
 .section__packages {
-  grid-column: center-start/center-end; }
+  grid-column: center-start/center-end;
+  margin-top: 12rem; }
 
 .section__services {
-  grid-column: center-start/center-end; }
+  grid-column: center-start/center-end;
+  margin-top: 12rem; }
 
 .section__why-choose-us {
-  grid-column: full-start/full-end; }
+  grid-column: full-start/full-end;
+  margin-top: 12rem; }
 
 .section__our-team {
-  grid-column: center-start/center-end; }
+  grid-column: center-start/center-end;
+  margin-top: 12rem; }
 
 .section__banner {
-  grid-column: full-start/full-end; }
+  grid-column: full-start/full-end;
+  margin-top: 12rem; }
 
 .section__testimonial {
-  grid-column: center-start/center-end; }
+  grid-column: center-start/center-end;
+  margin-top: 12rem; }
 
 .section__connect-with-us {
   grid-column: center-start/center-end;
-  margin-bottom: 10rem; }
+  margin-top: 12rem; }
 
 .section__footer {
-  grid-column: full-start/full-end; }
+  grid-column: full-start/full-end;
+  margin-top: 12rem; }
 
 .footer {
   background-image: linear-gradient(to bottom right, var(--color-primary-500), var(--color-primary-900));
@@ -1018,7 +1025,6 @@ a {
 .testimonial,
 .connect-with-us,
 .why-choose-us {
-  margin-top: 12rem;
   text-align: center; }
   .our-team__heading,
   .packages__heading,
@@ -1034,7 +1040,3 @@ a {
   .connect-with-us__text,
   .why-choose-us__text {
     white-space: break-word; }
-
-.banner,
-.footer {
-  margin-top: 12rem; }
