@@ -27,10 +27,19 @@
       padding: var(--space-md-3);
       display: flex;
       gap: var(--grid-gap-1);
+
+      @include respond(mobile) {
+        flex-direction: column;
+        padding: var(--space-md-1);
+      }
     }
   }
   &__user {
     flex: 0 1 2fr;
+
+    @include respond(mobile) {
+      align-self: center;
+    }
   }
 
   &__user-photo {
@@ -58,9 +67,15 @@
     border-left: 1px dashed rgba(0, 0, 0, 0.3);
     flex: 0 1 8fr;
     cursor: pointer;
+    @include respond(mobile) {
+      align-self: center;
+    }
   }
   &__details > span {
     display: block;
+    @include respond(mobile) {
+      text-align: center;
+    }
   }
 
   &__username {

@@ -10,6 +10,10 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  @include respond(mobile) {
+    padding: var(--space-lg-1);
+  }
+
   &__details {
     color: var(--color-primary-50);
   }
@@ -24,6 +28,9 @@
 
     @include respond(tab-land) {
       width: 85%;
+    }
+    @include respond(mobile) {
+      width: 100%;
     }
   }
 

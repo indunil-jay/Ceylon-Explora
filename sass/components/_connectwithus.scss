@@ -23,6 +23,9 @@
     @include respond(mobile-xl) {
       padding: var(--space-xlg-2);
     }
+    @include respond(mobile) {
+      padding: var(--space-lg-2);
+    }
 
     &-row {
       border-bottom: 1px solid var(--color-primary-700);
@@ -70,6 +73,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+    @include respond(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     &:not(:last-child) {
       margin-bottom: var(--space-sm-2);
     }
@@ -102,6 +109,10 @@
 
     width: 90%;
     transition: var(--transition-mode-2);
+
+    @include respond(mobile) {
+      width: 95%;
+    }
 
     &:focus {
       outline: none;

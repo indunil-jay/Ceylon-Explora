@@ -439,6 +439,9 @@ a {
       padding: var(--space-md-2) var(--space-xlg-2);
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, min-content); } }
+  @media only screen and (max-width: 36em) {
+    .services__container {
+      grid-template-columns: repeat(1, 1fr); } }
 
 .services__service {
   background-color: var(--color-white);
@@ -482,22 +485,22 @@ a {
       width: 3.6rem;
       height: 3.6rem; } }
 
-.services__text {
+.services__texts {
   display: flex;
   flex-direction: column;
   margin-top: var(--margin-xsm);
   text-align: center; }
-  .services__text--header {
+  .services__texts--header {
     align-self: center;
     padding: var(--space-sm-1); }
     @media only screen and (max-width: 50em) {
-      .services__text--header {
+      .services__texts--header {
         padding: var(--space-xsm-2); } }
-  .services__text--para {
+  .services__texts--para {
     align-self: center;
     padding: var(--space-sm-1); }
     @media only screen and (max-width: 50em) {
-      .services__text--para {
+      .services__texts--para {
         margin-top: -1rem;
         padding: var(--space-xsm-2); } }
 
@@ -505,6 +508,9 @@ a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   background-color: var(--color-primary-500); }
+  @media only screen and (max-width: 36em) {
+    .why-choose-us {
+      grid-template-columns: repeat(1, 1fr); } }
   .why-choose-us__content {
     padding: var(--space-lg-3);
     text-align: start;
@@ -535,6 +541,9 @@ a {
     @media only screen and (max-width: 75em) {
       .why-choose-us__gallery {
         padding: var(--space-sm-1); } }
+    @media only screen and (max-width: 36em) {
+      .why-choose-us__gallery {
+        display: none; } }
   .why-choose-us__picture {
     width: 100%;
     height: 100%;
@@ -652,6 +661,9 @@ a {
   @media only screen and (max-width: 50em) {
     .banner {
       grid-template-columns: repeat(1, 1fr); } }
+  @media only screen and (max-width: 36em) {
+    .banner {
+      padding: var(--space-lg-1); } }
   .banner__details {
     color: var(--color-primary-50); }
   @media only screen and (max-width: 75em) {
@@ -662,6 +674,9 @@ a {
     @media only screen and (max-width: 75em) {
       .banner__heading, .banner__text {
         width: 85%; } }
+    @media only screen and (max-width: 36em) {
+      .banner__heading, .banner__text {
+        width: 100%; } }
   .banner__button {
     display: grid;
     place-items: center; }
@@ -706,9 +721,16 @@ a {
     padding: var(--space-md-3);
     display: flex;
     gap: var(--grid-gap-1); }
+    @media only screen and (max-width: 36em) {
+      .testimonial__slide__wrapper {
+        flex-direction: column;
+        padding: var(--space-md-1); } }
 
 .testimonial__user {
   flex: 0 1 2fr; }
+  @media only screen and (max-width: 36em) {
+    .testimonial__user {
+      align-self: center; } }
 
 .testimonial__user-photo {
   background-color: var(--color-primary-100);
@@ -732,9 +754,15 @@ a {
   border-left: 1px dashed rgba(0, 0, 0, 0.3);
   flex: 0 1 8fr;
   cursor: pointer; }
+  @media only screen and (max-width: 36em) {
+    .testimonial__details {
+      align-self: center; } }
 
 .testimonial__details > span {
   display: block; }
+  @media only screen and (max-width: 36em) {
+    .testimonial__details > span {
+      text-align: center; } }
 
 .testimonial__username {
   font-size: var(--font-sm-2);
@@ -815,6 +843,9 @@ a {
     @media only screen and (max-width: 50em) {
       .connect-with-us-form__company {
         padding: var(--space-xlg-2); } }
+    @media only screen and (max-width: 36em) {
+      .connect-with-us-form__company {
+        padding: var(--space-lg-2); } }
     .connect-with-us-form__company-row {
       border-bottom: 1px solid var(--color-primary-700);
       cursor: pointer; }
@@ -848,6 +879,9 @@ a {
   .connect-with-us-form__row {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
+    @media only screen and (max-width: 36em) {
+      .connect-with-us-form__row {
+        grid-template-columns: repeat(1, 1fr); } }
     .connect-with-us-form__row:not(:last-child) {
       margin-bottom: var(--space-sm-2); }
   .connect-with-us-form__group:not(:last-child) {
@@ -870,6 +904,9 @@ a {
     border: 1px solid var(--color-primary-800);
     width: 90%;
     transition: var(--transition-mode-2); }
+    @media only screen and (max-width: 36em) {
+      .connect-with-us-form__input {
+        width: 95%; } }
     .connect-with-us-form__input:focus {
       outline: none;
       box-shadow: var(--box-shadow-type-7);
@@ -1280,6 +1317,12 @@ a {
   align-content: center;
   display: grid;
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+  @media only screen and (max-width: 36em) {
+    .landing {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
   .landing__content {
     grid-column: center-start / col-start 6;
     color: var(--color-primary-50);
@@ -1288,6 +1331,9 @@ a {
       .landing__content {
         margin-left: var(--space-md-2);
         line-height: 1.3; } }
+    @media only screen and (max-width: 36em) {
+      .landing__content {
+        margin-left: 0; } }
   .landing__heading {
     display: block; }
     .landing__heading-modifier {
@@ -1327,3 +1373,11 @@ a {
   .why-choose-us__text {
     display: block;
     white-space: break-word; }
+    @media only screen and (max-width: 36em) {
+      .our-team__text,
+      .packages__text,
+      .services__text,
+      .testimonial__text,
+      .connect-with-us__text,
+      .why-choose-us__text {
+        padding: 0px 5rem; } }

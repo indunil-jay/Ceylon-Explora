@@ -31,16 +31,9 @@ $break-point arguments
       @content;
     }
   }
-
-  //   @if $break-point ==tab-land {
-  //     @media only screen and (max-width: 75em) {
-  //       @content;
-  //     }
-  //   }
-
-  //   @if $break-point ==big-desktop {
-  //     @media only screen and (max-width: 112.5em) {
-  //       @content;
-  //     }
-  //   }
+  @if $break-point == mobile {
+    @media only screen and (max-width: 36em) {
+      @content;
+    }
+  }
 }

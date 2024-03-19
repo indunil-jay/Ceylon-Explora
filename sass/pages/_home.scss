@@ -17,6 +17,13 @@
     )
     [center-end] 1fr[full-end];
 
+  @include respond(mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__content {
     grid-column: center-start / col-start 6;
     color: var(--color-primary-50);
@@ -25,6 +32,9 @@
     @include respond(tab-port) {
       margin-left: var(--space-md-2);
       line-height: 1.3;
+    }
+    @include respond(mobile) {
+      margin-left: 0;
     }
   }
   &__heading {
@@ -67,5 +77,9 @@
   &__text {
     display: block;
     white-space: break-word;
+
+    @include respond(mobile) {
+      padding: 0px 5rem;
+    }
   }
 }
