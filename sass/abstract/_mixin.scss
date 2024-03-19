@@ -1,1 +1,41 @@
+// MEDIA QUERY MANAGER
+/*
+0-600px -Phone
+600-900 -tablet
+900-1200- landscape-tabs
+1200-1800 - often desktop
+1800> big monitor
 
+
+$break-point arguments
+  -phone
+  -tab-port
+  -tab-land
+  -big-desktop
+*/
+
+@mixin respond($break-point) {
+  @if $break-point == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $break-point ==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  //   @if $break-point ==tab-land {
+  //     @media only screen and (max-width: 75em) {
+  //       @content;
+  //     }
+  //   }
+
+  //   @if $break-point ==big-desktop {
+  //     @media only screen and (max-width: 112.5em) {
+  //       @content;
+  //     }
+  //   }
+}

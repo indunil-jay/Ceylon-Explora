@@ -27,12 +27,12 @@
     &-modifier {
       background-color: var(--color-yellow-2);
 
-      padding: 0 var(--padding-vertical-2);
+      padding: 0 var(--space-sm-2);
     }
   }
 
   &__text {
-    margin-block: var(--margin-xsm);
+    margin-block: var(--space-sm-2);
   }
   &__btn {
     display: inline-block;

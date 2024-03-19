@@ -3,13 +3,17 @@
   grid-template-columns: 1fr 2fr;
 
   &__content {
-    padding: 10rem;
+    padding: var(--space-lg-3);
     text-align: start;
     display: grid;
     place-items: center;
+
+    @include respond(tab-land) {
+      padding: var(--space-lg-1);
+    }
   }
   &__para-1 {
-    font-size: 1.4rem;
+    font-size: var(--font-sm-1);
     color: yellow;
     font-weight: 600;
     text-transform: capitalize;
@@ -18,7 +22,11 @@
   &__gallery {
     border-right: 1px dashed var(--color-primary-300);
     border-width: thin;
-    padding: 3rem;
+    padding: var(--space-md-1);
+
+    @include respond(tab-land) {
+      padding: var(--space-sm-1);
+    }
   }
 
   &__picture {

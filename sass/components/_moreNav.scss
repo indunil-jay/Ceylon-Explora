@@ -2,7 +2,7 @@
   grid-template-columns:
     [ full-start] 1fr [center-start] repeat(
       8,
-      [col-start]minmax(min-content, 15.5rem) [col-end]
+      [col-start] minmax(min-content, 15.5rem) [col-end]
     )
     [center-end] 1fr[full-end];
   //   display: grid;
@@ -13,7 +13,7 @@
   left: 50%;
   transform: translate(-50%, -26%);
   background-color: var(--color-primary-50);
-  border-radius: 10px;
+  border-radius: var(--border-radius-x3);
 
   height: min-content;
   width: 120rem;
@@ -23,15 +23,15 @@
     grid-column: center-start/center-end;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    padding: 1.5rem 3rem;
+    grid-gap: var(--grid-gap-1);
+    padding: var(--space-sm-1) var(--space-md-1);
   }
   &__box {
     background-color: white;
-    border-radius: 10px;
-    padding: 1rem;
+    border-radius: var(--border-radius-x3);
+    padding: var(--space-xsm-3);
     display: flex;
-    gap: 2rem;
+    gap: var(--grid-gap-1);
     justify-content: flex-start;
   }
   &__icon {
@@ -51,7 +51,7 @@
 
   &__btn {
     font-family: inherit;
-    font-size: 1.4rem;
+    font-size: var(--font-sm-1);
     font-weight: 500;
     display: inline-block;
     border-bottom: 1px solid transparent;

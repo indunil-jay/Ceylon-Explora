@@ -4,10 +4,14 @@
   grid-row: 1/2;
   border-bottom: 2px solid var(--color-primary-800);
   color: var(--color-primary-700);
-  padding: var(--padding-vertical-1) var(--padding-horizontal-1);
+  padding: var(--space-xsm-1) var(--space-sm-2);
   display: grid;
   grid-template-columns: 1fr 3fr;
-  margin-bottom: var(--margin-bottom-xsm);
+  margin-bottom: var(--space-xsm-3);
+
+  @include respond(tab-land) {
+    grid-column: full-start/full-end;
+  }
 
   &__logoContainer {
     width: 100%;
@@ -19,7 +23,7 @@
       cursor: pointer;
       width: 20rem;
       height: auto;
-      padding: var(--padding-vertical-2) var(--padding-horizontal-1);
+      padding: var(--space-sm-2) var(--space-sm-1);
     }
   }
 
@@ -34,12 +38,12 @@
       align-items: center;
 
       &__item {
-        padding: var(--padding-vertical-1) var(--padding-horizontal-1);
+        padding: var(--space-xsm-1) var(--space-sm-2);
         transition: var(--transition-mode-2);
         position: relative;
 
         &:not(:last-child) {
-          margin-right: var(--margin-right-xsm);
+          margin-right: var(--space-xsm-1);
         }
       }
 
