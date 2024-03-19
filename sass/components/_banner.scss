@@ -9,6 +9,11 @@
   &__details {
     color: var(--color-primary-50);
   }
+  &__heading {
+    @include respond(tab-land) {
+      font-size: var(--font-h2);
+    }
+  }
   &__heading,
   &__text {
     width: 70%;

@@ -111,6 +111,11 @@
     cursor: pointer;
     transition: var(--transition-mode-2);
 
+    @include respond(tab-land) {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+
     &:hover {
       transform: scale(1.03);
       fill: var(--color-primary-500);

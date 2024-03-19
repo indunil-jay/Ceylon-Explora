@@ -1,7 +1,7 @@
 // MEDIA QUERY MANAGER
 /*
 0-600px -Phone
-600-900 -tablet
+600-1024 -tablet
 900-1200- landscape-tabs
 1200-1800 - often desktop
 1800> big monitor
@@ -21,8 +21,8 @@ $break-point arguments
     }
   }
 
-  @if $break-point ==tab-port {
-    @media only screen and (max-width: 56.25em) {
+  @if $break-point == tab-port {
+    @media only screen and (max-width: 64.25em) {
       @content;
     }
   }

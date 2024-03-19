@@ -1,12 +1,25 @@
 .why-choose-us {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  background-color: var(--color-primary-500);
 
   &__content {
     padding: var(--space-lg-3);
     text-align: start;
     display: grid;
     place-items: center;
+
+    h2 {
+      @include respond(tab-land) {
+        color: var(--color-primary-50);
+        line-height: var(--line-height-sm-1);
+      }
+    }
+    p {
+      @include respond(tab-land) {
+        margin-top: var(--space-xsm-3);
+      }
+    }
 
     @include respond(tab-land) {
       padding: var(--space-lg-1);

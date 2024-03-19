@@ -5,6 +5,12 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: var(--grid-gap-3);
     grid-template-rows: repeat(2, min-content);
+
+    @include respond(tab-port) {
+      padding: var(--space-md-2) var(--space-xlg-2);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, min-content);
+    }
   }
 
   &__service {
