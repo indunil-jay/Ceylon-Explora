@@ -1915,3 +1915,89 @@ a {
 
 .about__userphoto:hover ~ .about__role {
   font-size: 1.05rem; }
+
+.postContainer {
+  grid-column: center-start/center-end; }
+
+.post__wrapper {
+  width: 100%;
+  padding: var(--space-md-1) var(--space-xlg-1);
+  box-shadow: var(--box-shadow-type-2s); }
+  @media only screen and (max-width: 50em) {
+    .post__wrapper {
+      padding: var(--space-md-1) var(--space-lg-2); } }
+  @media only screen and (max-width: 36em) {
+    .post__wrapper {
+      padding: var(--space-md-1) var(--space-md-1); } }
+
+.post__backBtnContainer {
+  display: inline-block;
+  border-radius: 100px;
+  margin-bottom: 2rem; }
+
+.post__picture {
+  width: 100%;
+  height: 50vh; }
+  .post__picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.post__title {
+  margin-bottom: 6rem; }
+  .post__title h2 {
+    font-size: var(--font-h1);
+    text-transform: capitalize;
+    width: 90%;
+    line-height: var(--line-height-sm-1); }
+    @media only screen and (max-width: 50em) {
+      .post__title h2 {
+        width: 100%;
+        line-height: 1.2; } }
+
+.post__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 0.5rem;
+  margin: 3rem 0 5rem 0; }
+
+.post__group {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem; }
+  .post__group:last-child {
+    margin-top: -8px; }
+
+.post__userimg {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-primary-500);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .post__userimg img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover; }
+
+.post__username {
+  font-size: 1.6rem; }
+
+.post__icon {
+  width: 2rem;
+  height: 2rem; }
+
+.post__date {
+  font-size: 1.4rem; }
+
+.post__publish {
+  font-size: 1.4rem;
+  margin-left: 3.8rem; }
+
+.post__details p {
+  font-size: 1.6rem;
+  margin-bottom: 3rem; }
