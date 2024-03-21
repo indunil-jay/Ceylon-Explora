@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./images/logos/favicon-green.png"
+      type="image/x-icon"
+      sizes="16x16 32x32 48x48"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Ceylon Explora</title>
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <header class="header dashboard__header">
+        <div class="header__logoContainer dashboard__logo">
+          <img src="./images/logos/logo-dark.png" alt="company-logo" />
+        </div>
+
+        <nav class="dashboard__navContainer">
+          <div class="dashboard__nav">
+            <h2 class="dashboard__title">Dashboard</h2>
+
+            <div class="dashboard__userimg">
+              <img src="./images/users/user-2.jpg" alt="profile photo" />
+              <p class="paragraph paragraph--p2 dashboard__username">Amber</p>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="dashboard__main">
+        <div class="dashboard__wrapper">
+          <aside class="dashboard__sidebar">
+            <div class="dashboard__navigation">
+              <div class="dashboard__navs">
+                <div class="dashbaord__userNav">
+                  <h2 class="dashboard__userTitle">Profile</h2>
+                  <ul class="dashboard__list">
+                    <li class="dashboard__item">
+                      <a href="#" class="dashboard__link">
+                        <svg class="dashboard__icon">
+                          <use
+                            xlink:href="images/sprite.svg#icon-verified"
+                          ></use>
+                        </svg>
+                        <span class="dashboard__itemName">My Profile</span>
+                      </a>
+                    </li>
+                    <li class="dashboard__item">
+                      <a href="#" class="dashboard__link">
+                        <svg class="dashboard__icon">
+                          <use
+                            xlink:href="images/sprite.svg#icon-shopping-cart"
+                          ></use>
+                        </svg>
+                        <span class="dashboard__itemName">My Bookings</span>
+                      </a>
+                    </li>
+                    <li class="dashboard__item">
+                      <a href="#" class="dashboard__link">
+                        <svg class="dashboard__icon">
+                          <use xlink:href="images/sprite.svg#icon-star"></use>
+                        </svg>
+                        <span class="dashboard__itemName">My Reviews</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="dashboard__adminNav">
+                  <h2 class="dashboard__adminTitle">Admin</h2>
+                  <ul class="dashboard__list">
+                    <li class="dashboard__item">
+                      <a href="#" class="dashboard__link">
+                        <svg class="dashboard__icon">
+                          <use xlink:href="images/sprite.svg#icon-map"></use>
+                        </svg>
+                        <span class="dashboard__itemName">Manage tours</span>
+                      </a>
+                    </li>
+                    <li class="dashboard__item">
+                      <a href="#" class="dashboard__link">
+                        <svg class="dashboard__icon">
+                          <use xlink:href="images/sprite.svg#icon-users"></use>
+                        </svg>
+                        <span class="dashboard__itemName">Manage users</span>
+                      </a>
+                    </li>
+                    <li class="dashboard__item">
+                      <a href="#" class="dashboard__link">
+                        <svg class="dashboard__icon">
+                          <use xlink:href="images/sprite.svg#icon-star"></use>
+                        </svg>
+                        <span class="dashboard__itemName">Manage reviews</span>
+                      </a>
+                    </li>
+                    <li class="dashboard__item">
+                      <a href="#" class="dashboard__link">
+                        <svg class="dashboard__icon">
+                          <use
+                            xlink:href="images/sprite.svg#icon-database"
+                          ></use>
+                        </svg>
+                        <span class="dashboard__itemName">Manage Bookings</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="dashboard__companycopyrights">
+                <p class="paragraph paragraph--p3">
+                  &COPY; Ceylon Explora (pvt).ltd
+                </p>
+              </div>
+            </div>
+          </aside>
+
+          <!-- my profile -->
+          <section class="dashboard__grid">
+            <div class="dashboard__container">
+              <h2 class="heading heading--h2">Your account settings</h2>
+              <form
+                class="form"
+                action=""
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <div class="form__group">
+                  <label class="form__label" for="name">Name</label>
+                  <input
+                    id="name"
+                    class="form__input"
+                    type="text"
+                    value="user.name"
+                    required
+                    name="name"
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="email">Email address</label>
+                  <input
+                    id="email"
+                    class="form__input"
+                    type="email"
+                    value="user.email"
+                    required
+                    name="email"
+                  />
+                </div>
+                <div class="form__group">
+                  <div class="form__group__wrapper">
+                    <div class="form__photo-upload">
+                      <div class="form__image-wrapper">
+                        <img
+                          class="form__user-photo"
+                          src="./images/users/user-2.jpg"
+                          alt="User photo"
+                        />
+                      </div>
+                      <input
+                        class="form__upload"
+                        type="file"
+                        accept="image/*"
+                        id="photo"
+                        name="photo"
+                      />
+                      <label for="photo">Choose new photo</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <button class="form__btn btn__rightWave" type="submit">
+                    Save settings
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div class="form__line">&nbsp;</div>
+            <div class="dashboard__container">
+              <h2 class="heading-secondary">Password change</h2>
+              <form class="form form-user-settings">
+                <div class="form__group">
+                  <label class="form__label" for="password-current"
+                    >Current password</label
+                  >
+                  <input
+                    id="password-current"
+                    class="form__input"
+                    type="password"
+                    placeholder="••••••••"
+                    required
+                    minlength="8"
+                  />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="password">New password</label>
+                  <input
+                    id="password"
+                    class="form__input"
+                    type="password"
+                    placeholder="••••••••"
+                    required
+                    minlength="8"
+                  />
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="password-confirm"
+                    >Confirm password</label
+                  >
+                  <input
+                    id="password-confirm"
+                    class="form__input"
+                    type="password"
+                    placeholder="••••••••"
+                    required
+                    minlength="8"
+                  />
+                </div>
+                <div class="form__group">
+                  <button class="form__btn btn__rightWave" type="submit">
+                    Save password
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <!-- My bookings -->
+          <section class="dashboard__grid">
+            <div class="dashboard__container">
+              <h2>My Bookings</h2>
+              <div class="pricing dashboard__mybooking">
+                <div class="card">
+                  <div class="card__header">
+                    <div class="card__picture">
+                      <div class="card__picture-overlay">&nbsp;</div>
+                      <img
+                        class="card__picture-img"
+                        src="./images/locations/colombo.jpg"
+                        alt="Tour 1"
+                      />
+                    </div>
+                    <h3 class="heading--h3 card__picture-text">
+                      <span class="card__picture-span">The Forest Hiker</span>
+                    </h3>
+                  </div>
+
+                  <div class="card__details">
+                    <h4 class="card__sub-heading">Easy 5-day tour</h4>
+                    <p class="card__text">
+                      Breathtaking hike through the Canadian Banff National Park
+                    </p>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-location_pin"
+                        ></use>
+                      </svg>
+                      <span>Banff, Canada</span>
+                    </div>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-calendar_today"
+                        ></use>
+                      </svg>
+                      <span>April 2021</span>
+                    </div>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-explore"
+                        ></use>
+                      </svg>
+                      <span>3 stops</span>
+                    </div>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-people_alt"
+                        ></use>
+                      </svg>
+                      <span>25 people</span>
+                    </div>
+                  </div>
+
+                  <div class="card__footer">
+                    <p>
+                      <span class="card__footer-value">$297</span>
+                      <span class="card__footer-text">per person</span>
+                    </p>
+                    <p class="card__ratings">
+                      <span class="card__footer-value">4.9</span>
+                      <span class="card__footer-text">rating (21)</span>
+                    </p>
+                    <a class="card__btn" href="#">Details &rarr;</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card__header">
+                    <div class="card__picture">
+                      <div class="card__picture-overlay">&nbsp;</div>
+                      <img
+                        class="card__picture-img"
+                        src="./images/locations/colombo.jpg"
+                        alt="Tour 1"
+                      />
+                    </div>
+                    <h3 class="heading--h3 card__picture-text">
+                      <span class="card__picture-span">The Forest Hiker</span>
+                    </h3>
+                  </div>
+
+                  <div class="card__details">
+                    <h4 class="card__sub-heading">Easy 5-day tour</h4>
+                    <p class="card__text">
+                      Breathtaking hike through the Canadian Banff National Park
+                    </p>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-location_pin"
+                        ></use>
+                      </svg>
+                      <span>Banff, Canada</span>
+                    </div>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-calendar_today"
+                        ></use>
+                      </svg>
+                      <span>April 2021</span>
+                    </div>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-explore"
+                        ></use>
+                      </svg>
+                      <span>3 stops</span>
+                    </div>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-people_alt"
+                        ></use>
+                      </svg>
+                      <span>25 people</span>
+                    </div>
+                  </div>
+
+                  <div class="card__footer">
+                    <p>
+                      <span class="card__footer-value">$297</span>
+                      <span class="card__footer-text">per person</span>
+                    </p>
+                    <p class="card__ratings">
+                      <span class="card__footer-value">4.9</span>
+                      <span class="card__footer-text">rating (21)</span>
+                    </p>
+                    <a class="card__btn" href="#">Details &rarr;</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card__header">
+                    <div class="card__picture">
+                      <div class="card__picture-overlay">&nbsp;</div>
+                      <img
+                        class="card__picture-img"
+                        src="./images/locations/colombo.jpg"
+                        alt="Tour 1"
+                      />
+                    </div>
+                    <h3 class="heading--h3 card__picture-text">
+                      <span class="card__picture-span">The Forest Hiker</span>
+                    </h3>
+                  </div>
+
+                  <div class="card__details">
+                    <h4 class="card__sub-heading">Easy 5-day tour</h4>
+                    <p class="card__text">
+                      Breathtaking hike through the Canadian Banff National Park
+                    </p>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-location_pin"
+                        ></use>
+                      </svg>
+                      <span>Banff, Canada</span>
+                    </div>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-calendar_today"
+                        ></use>
+                      </svg>
+                      <span>April 2021</span>
+                    </div>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-explore"
+                        ></use>
+                      </svg>
+                      <span>3 stops</span>
+                    </div>
+                    <div class="card__data">
+                      <svg class="card__icon">
+                        <use
+                          xlink:href="./images/sprite.svg#icon-people_alt"
+                        ></use>
+                      </svg>
+                      <span>25 people</span>
+                    </div>
+                  </div>
+
+                  <div class="card__footer">
+                    <p>
+                      <span class="card__footer-value">$297</span>
+                      <span class="card__footer-text">per person</span>
+                    </p>
+                    <p class="card__ratings">
+                      <span class="card__footer-value">4.9</span>
+                      <span class="card__footer-text">rating (21)</span>
+                    </p>
+                    <a class="card__btn" href="#">Details &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- My reviews -->
+          <section class="dashboard__grid">
+            <div class="dashboard__container">
+              <h2 class="heading heading--h2">Add Review</h2>
+              <form
+                class="form"
+                action=""
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <div class="form__group">
+                  <label class="form__label" for="name">Tour Name</label>
+                  <input
+                    id="name"
+                    class="form__input"
+                    type="text"
+                    value="user.name"
+                    required
+                    name="name"
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="message">Review</label>
+                  <textarea
+                    id="message"
+                    class="form__textarea"
+                    type="text"
+                    name="review"
+                    placeholder="Type Your Review"
+                    rows="10"
+                  ></textarea>
+                </div>
+
+                <div class="form__group">
+                  <button class="form__btn btn__rightWave" type="submit">
+                    Add Review
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="form__line">&nbsp;</div>
+            <div class="dashboard__container">
+              <h2>My Reviews</h2>
+
+              <div class="testimonial__container">
+                <div class="testimonial__slider dashboard__reviews">
+                  <div class="testimonial__slide testimonial__slide--active">
+                    <div class="testimonial__slide__wrapper">
+                      <div class="testimonial__user">
+                        <div class="testimonial__user-photo">
+                          <img src="./images/users/user-3.jpg" alt="" />
+                        </div>
+                      </div>
+
+                      <div class="testimonial__details">
+                        <span class="testimonial__username">Edward jeffry</span>
+                        <span class="testimonial__email"
+                          >edwardjeffry@gmail.com</span
+                        >
+                        <span class="testimonial__group">
+                          <span class="testimonial__date"
+                            >Apr 13, 2025, 10 : 45 AM</span
+                          >
+                          <span class="testimonial__country">
+                            <span class="testimonial__country-text">from</span>
+                            <span class="testimonial__country-name"
+                              >Australia</span
+                            >
+                          </span>
+                        </span>
+                        <p class="testimonial__review paragraph paragraph--p2">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Suscipit nesciunt eius similique hic
+                          reprehenderit explicabo rerum a at? Praesentium
+                          distinctio, elit. Suscipit nesciunt eius similique hic
+                          reprehenderit explicabo rerum a at? Praesentium
+                          distinctio, deleniti quod commodi tempore reiciendis
+                          officiis soluta perferendis nostrum iste.
+                        </p>
+
+                        <div class="dashboard__review--btns">
+                          <button
+                            class="form__btn btn__rightWave"
+                            type="submit"
+                          >
+                            update
+                          </button>
+
+                          <button
+                            class="form__btn btn__rightWave"
+                            type="submit"
+                          >
+                            delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Manage tours -->
+          <section class="dashboard__grid">
+            <div class="dashboard__container">
+              <h2 class="heading heading--h2">Add Tours</h2>
+              <form
+                class="form"
+                action=""
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <div class="form__group">
+                  <label class="form__label" for="name">Tour Name</label>
+                  <input
+                    id="name"
+                    class="form__input"
+                    type="text"
+                    value="user.name"
+                    required
+                    name="name"
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="name">Difficulty</label>
+                  <input
+                    id="name"
+                    class="form__input"
+                    type="text"
+                    value="user.name"
+                    required
+                    name="name"
+                  />
+                </div>
+
+                <div class="form__group">
+                  <button class="form__btn btn__rightWave" type="submit">
+                    Add Tour
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="form__line">&nbsp;</div>
+            <div class="dashboard__container">
+              <h2 class="heading heading--h2">Manage Tour</h2>
+
+              <div class="dashboard__table">
+                <div class="dashboard__table__row">
+                  <div class="dashboard__table__col">01</div>
+                  <div class="dashboard__table__col">
+                    <div class="dashboard__table__picture">
+                      <img src="./images/locations/colombo.jpg" alt="img" />
+                    </div>
+                  </div>
+                  <div class="dashboard__table__col">The Forest hiker</div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--update"
+                    >
+                      update
+                    </button>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--delete"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <div class="dashboard__table__row">
+                  <div class="dashboard__table__col">02</div>
+                  <div class="dashboard__table__col">
+                    <div class="dashboard__table__picture">
+                      <img src="./images/locations/colombo.jpg" alt="img" />
+                    </div>
+                  </div>
+                  <div class="dashboard__table__col">The Forest hiker</div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--update"
+                    >
+                      update
+                    </button>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--delete"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <div class="dashboard__table__row">
+                  <div class="dashboard__table__col">03</div>
+                  <div class="dashboard__table__col">
+                    <div class="dashboard__table__picture">
+                      <img src="./images/locations/colombo.jpg" alt="img" />
+                    </div>
+                  </div>
+                  <div class="dashboard__table__col">The Forest hiker</div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--update"
+                    >
+                      update
+                    </button>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--delete"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Manage users -->
+          <section class="dashboard__grid">
+            <div class="dashboard__container">
+              <h2 class="heading heading--h2">Add Guides</h2>
+              <form
+                class="form"
+                action=""
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <div class="form__group">
+                  <label class="form__label" for="name">Guide Name</label>
+                  <input
+                    id="name"
+                    class="form__input"
+                    type="text"
+                    value="user.name"
+                    required
+                    name="name"
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="name">role</label>
+                  <input
+                    id="name"
+                    class="form__input"
+                    type="text"
+                    value="user.name"
+                    required
+                    name="name"
+                  />
+                </div>
+
+                <div class="form__group">
+                  <button class="form__btn btn__rightWave" type="submit">
+                    Add Tour
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="form__line">&nbsp;</div>
+            <div class="dashboard__container">
+              <h2 class="heading heading--h2">Manage Users</h2>
+
+              <div class="dashboard__table">
+                <div class="dashboard__table__row">
+                  <div class="dashboard__table__col">01</div>
+                  <div class="dashboard__table__col">
+                    <div
+                      class="dashboard__table__picture dashboard__table__picture--user"
+                    >
+                      <img src="./images/users/user-2.jpg" alt="img" />
+                    </div>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <span class="dashboard__table__user">dora alexender</span>
+                    <span class="dashboard__table__role">tour guide</span>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--update"
+                    >
+                      update
+                    </button>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--delete"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <div class="dashboard__table__row">
+                  <div class="dashboard__table__col">01</div>
+                  <div class="dashboard__table__col">
+                    <div
+                      class="dashboard__table__picture dashboard__table__picture--user"
+                    >
+                      <img src="./images/users/user-2.jpg" alt="img" />
+                    </div>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <span class="dashboard__table__user">dora alexender</span>
+                    <span class="dashboard__table__role">tour guide</span>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--update"
+                    >
+                      update
+                    </button>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--delete"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+                <div class="dashboard__table__row">
+                  <div class="dashboard__table__col">01</div>
+                  <div class="dashboard__table__col">
+                    <div
+                      class="dashboard__table__picture dashboard__table__picture--user"
+                    >
+                      <img src="./images/users/user-2.jpg" alt="img" />
+                    </div>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <span class="dashboard__table__user">dora alexender</span>
+                    <span class="dashboard__table__role">tour guide</span>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--update"
+                    >
+                      update
+                    </button>
+                  </div>
+                  <div class="dashboard__table__col">
+                    <button
+                      class="dashboard__table__btn dashboard__table__btn--delete"
+                    >
+                      delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
