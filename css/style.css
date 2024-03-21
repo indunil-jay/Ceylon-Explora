@@ -837,6 +837,21 @@ a {
     transform: scale(1.03);
     fill: var(--color-primary-500); }
 
+.testimonial__box {
+  display: flex;
+  align-items: center; }
+
+.testimonial__stars {
+  display: flex;
+  margin-left: 10rem;
+  gap: 0.7rem;
+  cursor: pointer; }
+
+.testimonial__star {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: var(--color-primary-500); }
+
 .connect-with-us-form {
   margin-top: var(--space-lg-1);
   display: grid;
@@ -2001,3 +2016,185 @@ a {
 .post__details p {
   font-size: 1.6rem;
   margin-bottom: 3rem; }
+
+.tourContainer {
+  grid-column: center-start/center-end; }
+
+.tour__header {
+  position: relative; }
+
+.tour__picture {
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+  clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+  height: 60vh; }
+
+.tour__picture-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--color-primary-300)), to(var(--color-primary-500)));
+  background-image: linear-gradient(to right bottom, var(--color-primary-300), var(--color-primary-500));
+  opacity: 0.7; }
+
+.tour__picture-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%; }
+
+.tour__textwrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+
+.tour__picture-text {
+  font-size: var(--font-h1);
+  color: var(--color-primary-50);
+  width: 30%;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: var(--line-height-md); }
+  @media only screen and (max-width: 64.25em) {
+    .tour__picture-text {
+      width: 40%; } }
+  @media only screen and (max-width: 50em) {
+    .tour__picture-text {
+      width: 50%; } }
+  @media only screen and (max-width: 36em) {
+    .tour__picture-text {
+      width: 60%; } }
+  @media only screen and (max-width: 25em) {
+    .tour__picture-text {
+      width: 80%; } }
+
+.tour__picture-span {
+  background-image: linear-gradient(to right bottom, var(--color-primary-300), var(--color-primary-500));
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: var(--space-xsm-3) var(--space-sm-2); }
+
+.tour__pins {
+  display: flex;
+  gap: var(--grid-gap-0);
+  justify-content: center;
+  align-items: center; }
+
+.tour__pin__group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--grid-gap-0);
+  color: var(--color-primary-50); }
+
+.tour__pin__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--color-primary-50); }
+
+.tour__details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: calc(0rem - var(--space-xlg-2)); }
+  @media only screen and (max-width: 64.25em) {
+    .tour__details {
+      grid-template-columns: 1fr; } }
+
+.tour__left {
+  padding-top: var(--space-xlg-3);
+  padding-inline: var(--space-md-1);
+  padding-bottom: var(--space-md-3);
+  background-color: var(--color-primary-50); }
+  @media only screen and (max-width: 64.25em) {
+    .tour__left {
+      display: flex;
+      justify-content: space-around; } }
+  @media only screen and (max-width: 50em) {
+    .tour__left {
+      flex-direction: column;
+      align-items: center; } }
+
+.tour__data {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap-0);
+  margin-bottom: var(--space-md-1); }
+
+.tour__data__title {
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md-1); }
+
+.tour__group__details {
+  display: flex;
+  align-items: center;
+  gap: var(--grid-gap-0); }
+
+.tour__group__title {
+  font-weight: 500;
+  font-size: var(--font-md);
+  text-transform: capitalize; }
+
+.tour__group__data {
+  font-weight: 300;
+  font-size: var(--font-default);
+  text-transform: capitalize; }
+
+.tour__icon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-primary-400); }
+
+.tour__guides {
+  margin-bottom: var(--space-md-1); }
+
+.tour__guide__group {
+  display: flex;
+  align-items: center;
+  gap: var(--grid-gap-0); }
+  .tour__guide__group:not(:last-child) {
+    margin-bottom: var(--space-sm-1); }
+
+.tour__guide__picture {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%; }
+  .tour__guide__picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; }
+
+.tour__guide__role {
+  font-size: var(--font-default);
+  font-weight: 500; }
+
+.tour__guide__name {
+  font-size: var(--font-xsm-2); }
+
+.tour__right {
+  padding-top: var(--space-lg-2); }
+
+.tour__description {
+  padding-inline: var(--space-lg-3); }
+  @media only screen and (max-width: 64.25em) {
+    .tour__description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center; } }
+  .tour__description h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 90%;
+    line-height: 1.2; }
+  .tour__description p {
+    margin-top: var(--space-sm-2); }
