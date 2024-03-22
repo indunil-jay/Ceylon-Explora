@@ -1,0 +1,239 @@
+.tourContainer {
+  grid-column: center-start/center-end;
+}
+
+.tour {
+  &__wrapper {
+    // padding: 3rem;
+  }
+
+  &__header {
+    position: relative;
+  }
+
+  &__picture {
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+    clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+    height: 60vh;
+  }
+
+  &__picture-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      from(var(--color-primary-300)),
+      to(var(--color-primary-500))
+    );
+    background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary-300),
+      var(--color-primary-500)
+    );
+    opacity: 0.7;
+  }
+
+  &__picture-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__textwrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__picture-text {
+    font-size: var(--font-h1);
+    color: var(--color-primary-50);
+    width: 30%;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: var(--line-height-md);
+
+    @include respond(tab-port) {
+      width: 40%;
+    }
+
+    @include respond(mobile-xl) {
+      width: 50%;
+    }
+    @include respond(mobile) {
+      width: 60%;
+    }
+    @include respond(mobile-sm) {
+      width: 80%;
+    }
+  }
+
+  &__picture-span {
+    background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary-300),
+      var(--color-primary-500)
+    );
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: var(--space-xsm-3) var(--space-sm-2);
+  }
+  &__pins {
+    display: flex;
+    gap: var(--grid-gap-0);
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pin__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--grid-gap-0);
+    color: var(--color-primary-50);
+  }
+
+  &__pin__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--color-primary-50);
+  }
+
+  &__details {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    margin-top: calc(0rem - var(--space-xlg-2));
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__left {
+    padding-top: var(--space-xlg-3);
+    padding-inline: var(--space-md-1);
+    padding-bottom: var(--space-md-3);
+    background-color: var(--color-primary-50);
+
+    @include respond(tab-port) {
+      display: flex;
+      justify-content: space-around;
+    }
+    @include respond(mobile-xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap-0);
+    margin-bottom: var(--space-md-1);
+  }
+
+  &__data__title {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md-1);
+  }
+
+  &__group__details {
+    display: flex;
+
+    align-items: center;
+    gap: var(--grid-gap-0);
+  }
+
+  &__group__title {
+    font-weight: 500;
+    font-size: var(--font-md);
+    text-transform: capitalize;
+  }
+
+  &__group__data {
+    font-weight: 300;
+    font-size: var(--font-default);
+    text-transform: capitalize;
+  }
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-primary-400);
+  }
+
+  &__guides {
+    margin-bottom: var(--space-md-1);
+  }
+
+  &__guide__group {
+    display: flex;
+    align-items: center;
+    gap: var(--grid-gap-0);
+
+    &:not(:last-child) {
+      margin-bottom: var(--space-sm-1);
+    }
+  }
+
+  &__guide__picture {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__guide__role {
+    font-size: var(--font-default);
+    font-weight: 500;
+  }
+
+  &__guide__name {
+    font-size: var(--font-xsm-2);
+  }
+
+  &__right {
+    padding-top: var(--space-lg-2);
+  }
+
+  &__description {
+    padding-inline: var(--space-lg-3);
+
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h2 {
+      font-weight: 500;
+      text-transform: uppercase;
+      width: 90%;
+      line-height: 1.2;
+    }
+
+    p {
+      margin-top: var(--space-sm-2);
+    }
+  }
+}

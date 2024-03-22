@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1rem = 10px
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem =9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem =8px
+  }
+
+  @include respond(mobile-xl) {
+    font-size: 46%; // 1rem =8px
+  }
+  @include respond(mobile-sm) {
+    font-size: 40%; // 1rem =8px
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-size: var(--font-h3);
+}
+
+::selection {
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-50);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto min-content;
+  grid-template-columns:
+    [full-start] 1fr [center-start]
+    repeat(8, [col-start] minmax(min-content, 15.5rem) [col-end])
+    [center-end] 1fr[full-end];
+
+  position: relative;
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/logos/favicon-green.png" type="image/x-icon" sizes="16x16 32x32 48x48">
+
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Ceylon Explora</title>
+</head>
+
+<body class="container">
+    <header class="header">
+        <div class="header__logoContainer">
+            <img src="./images/logos/logo-dark.png" alt="company-logo">
+        </div>
+
+        <nav class="header__navContainer">
+            <ul class="nav">
+                <li class="nav__item"><a href="#" class="nav__link nav__link--normal">Explore Tours</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--normal">Blog</a></li>
+                <li class="nav__item drop-down">
+                    <span class="nav__link nav__link--normal">
+                        More
+                        <svg class="nav__down__icon">
+                            <use xlink:href="images/sprite.svg#icon-chevron-down"></use>
+                        </svg>
+                    </span>
+                </li>
+                <li class="nav__item btn__outline btn btn__transparent">
+                    <a href="./login.html" class="nav__link--btn">Sign In</a>
+                </li>
+                <li class="nav__item btn__outline btn btn__fill ">
+                    <a href="#" class="nav__link--btn">Sing Up</a>
+                </li>
+
+                <!-- <li class="nav__item">
+          <a href="#" class="nav__link nav__link--profile">
+            <img src="./images/users/user-2.jpg" alt="profile photo">
+            <p class="paragraph paragraph--p2">Amber</p>
+          </a></li> -->
+
+                <li class="nav__item">
+
+                    <svg class="theme__icon">
+                        <use xlink:href="images/sprite.svg#icon-sun"></use>
+                    </svg>
+
+                </li>
+            </ul>
+
+
+            <div class="nav__container">
+                <ul class="nav__toggle ">
+                    <div class="nav__toggle__group">
+                        <li class="nav__item btn__outline btn btn__transparent">
+                            <a href="#" class="nav__link--btn">Sign In</a>
+                        </li>
+                        <li class="nav__item btn__outline btn btn__fill ">
+                            <a href="#" class="nav__link--btn">Sing Up</a>
+                        </li>
+                    </div>
+
+                    <!-- <li class="nav__toggle--user">
+          <a href="#" class="nav__link nav__link--profile">
+            <img src="./images/users/user-2.jpg" alt="profile photo">
+            <p class="paragraph paragraph--p2">Amber</p>
+          </a> -->
+
+                    </li>
+                    <li class="nav__item">
+
+                        <svg class="theme__icon">
+                            <use xlink:href="images/sprite.svg#icon-sun"></use>
+                        </svg>
+
+                    </li>
+
+                    <li class="nav__toggle--btn"></li>
+                </ul>
+            </div>
+
+
+        </nav>
+
+    </header>
+
+    <section class="tourContainer">
+        <div class="tour__wrapper">
+            <div class="tour__header">
+                <div class="tour__picture">
+                    <div class="tour__picture-overlay">&nbsp;</div>
+                    <img src="./images/locations/colombo.jpg" alt="tours-cover-image" class="tour__picture-img ">
+                </div>
+                <div class="tour__textwrapper">     
+                    <h3 class="tour__picture-text">
+                    <span class="tour__picture-span">The Forest Hiker</span>
+                    </h3>
+                      <div class="tour__pins">
+
+                         <div class="tour__pin__group">
+                           <svg class="tour__pin__icon">
+                            <use xlink:href="images/sprite.svg#icon-clock"></use>
+                           </svg>
+                            <span>9 Days</span>
+                         </div>
+
+                         <div class="tour__pin__group">
+                           <svg class="tour__pin__icon">
+                            <use xlink:href="images/sprite.svg#icon-location_pin"></use>
+                            </svg>
+                            <span>Nuwara Eliya</span>
+                         </div>
+
+                      </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="tourContainer">
+
+        <div class="tour__details">
+            <div class="tour__left">
+                <div class="tour__data">
+                   <h3 class="tour__data__title">Quick Facts</h3>
+                   <div class="tour__group__details">
+                        <svg class="tour__icon">
+                                <use xlink:href="images/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <span class="tour__group__title">Next Date</span>
+                        <span class="tour__group__data">March 2024</span>
+
+                   </div>
+
+                   <div class="tour__group__details">
+                    <svg class="tour__icon">
+                            <use xlink:href="images/sprite.svg#icon-trending-up"></use>
+                        </svg>
+                      <span class="tour__group__title">Difficulty</span>
+                      <span class="tour__group__data">Easy</span>
+
+                   </div>
+
+                   <div class="tour__group__details">
+                    <svg class="tour__icon">
+                            <use xlink:href="images/sprite.svg#icon-user"></use>
+                        </svg>
+                      <span class="tour__group__title">participants</span>
+                      <span class="tour__group__data">20 people</span>
+
+                   </div>
+
+                   <div class="tour__group__details">
+                    <svg class=" tour__icon">
+                            <use xlink:href="images/sprite.svg#icon-star"></use>
+                        </svg>
+                      <span class="tour__group__title">Rating</span>
+                      <span class="tour__group__data">4.0 / 5</span>
+
+                   </div>
+
+                </div>
+
+                <div class="tour__guides">
+                 <h3 class="tour__data__title" >Your Tour guides</h3>
+                     <div class="tour__guide__group">
+                        <div class="tour__guide__picture">
+                            <img src="./images/users/user-1.jpg" alt="">
+                        </div> 
+                        <h3 class="heading heading--h3  tour__guide__role">Lead Guide</h3>
+                        <p class="tour__guide__name">Miyah Myles</p>
+                     </div>
+
+                     <div class="tour__guide__group">
+    
+                        <div class="tour__guide__picture">
+                             <img src="./images/users/user-2.jpg" alt="">
+                        </div> 
+                        <h3 class="tour__guide__role">Lead Guide</h3>
+                        <p class="tour__guide__name">Miyah Myles</p>
+                     </div>
+                </div>
+
+            </div>
+
+            <div class="tour__right">
+
+                <div class="tour__description">
+                    <h2 class="heading heading--h2">About The forest hiker</h2>
+                    <p class="paragraph paragraph--p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores vitae officiis nobis,
+                    facilis accusantium assumenda. Blanditiis accusamus numquam quidem aspernatur fugit quia nemo veniam
+                    tempora, obcaecati minima distinctio saepe nobis voluptatibus ea nisi aut ut vero earum inventore
+                    odio sunt recusandae consequatur! Cupiditate animi dolorum magnam, nihil molestias at magni
+                    corrupti. Reprehenderit quasi laudantium, quos corrupti voluptas voluptatem! Soluta.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section__testimonial">
+      <div class="testimonial">
+        <h3 class="heading heading--h2 testimonial__heading"> Client’s Testimonials.</h3>
+        <p class="paragraph paragraph--p2 testimonial__text">It is a long established fact that a reader will be
+          distracted by the readable content of a page when looking
+          at its layout. The point of using.</p>
+      </div>
+
+      <div class="testimonial__container">
+
+        <div class="testimonial__slider">
+          <div class="testimonial__slide testimonial__slide--active">
+            <div class="testimonial__slide__wrapper">
+
+              <div class="testimonial__user">
+                <div class="testimonial__user-photo">
+                  <img src="./images/users/user-3.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="testimonial__details">
+              <div class="testimonial__box">
+                     <span class="testimonial__username">Edward jeffry</span>
+                     <span class="testimonial__stars">
+                           <svg class="testimonial__star">
+                            <use xlink:href="images/sprite.svg#icon-star"></use>
+                           </svg>
+                           <svg class="testimonial__star">
+                            <use xlink:href="images/sprite.svg#icon-star"></use>
+                           </svg>
+                           <svg class="testimonial__star">
+                            <use xlink:href="images/sprite.svg#icon-star"></use>
+                           </svg>
+                           <svg class="testimonial__star">
+                            <use xlink:href="images/sprite.svg#icon-star"></use>
+                           </svg>
+                           <svg class="testimonial__star">
+                            <use xlink:href="images/sprite.svg#icon-star"></use>
+                           </svg>
+               </span>
+              </div>
+
+                
+                <span class="testimonial__email">edwardjeffry@gmail.com</span>
+                <span class="testimonial__group">
+
+                  <span class="testimonial__date">Apr 13, 2025, 10 : 45 AM</span>
+                  <span class="testimonial__country">
+                    <span class="testimonial__country-text">from</span>
+                    <span class="testimonial__country-name">Australia</span>
+                  </span>
+                </span>
+                <p class="testimonial__review paragraph paragraph--p2">Lorem ipsum dolor sit amet consectetur
+                  adipisicing
+                  elit. Suscipit nesciunt eius similique hic reprehenderit explicabo rerum a at? Praesentium distinctio,
+                  elit. Suscipit nesciunt eius similique hic reprehenderit explicabo rerum a at? Praesentium distinctio,
+                  deleniti quod commodi tempore reiciendis officiis soluta perferendis nostrum iste.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="testimonial__slide">
+            <div class="testimonial__slide__wrapper">
+
+              <div class="testimonial__user">
+                <div class="testimonial__user-photo">
+                  <img src="./images/users/user-3.jpg" alt="">
+                </div>
+              </div>
+              <div class="testimonial__details">
+
+                <span class="testimonial__username">Edward jeffry</span>
+                <span class="testimonial__email">edwardjeffry@gmail.com</span>
+                <span class="testimonial__group">
+
+                  <span class="testimonial__date">Apr 13, 2025, 10 : 45 AM</span>
+                  <span class="testimonial__country">
+                    <span class="testimonial__country-text">from</span>
+                    <span class="testimonial__country-name">Australia</span>
+                  </span>
+                </span>
+                <p class="testimonial__review paragraph paragraph--p2">Lorem ipsum dolor sit amet consectetur
+                  adipisicing
+                  elit. Suscipit nesciunt eius similique hic reprehenderit explicabo rerum a at? Praesentium distinctio,
+                  elit. Suscipit nesciunt eius similique hic reprehenderit explicabo rerum a at? Praesentium distinctio,
+                  deleniti quod commodi tempore reiciendis officiis soluta perferendis nostrum iste.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="testimonial__navBtns">
+
+          <div class="testimonial__btn testimonial__btn--left">
+            <svg class="testimonial__icon">
+              <use xlink:href="images/sprite.svg#icon-circle-left"></use>
+            </svg>
+
+          </div>
+          <div class="testimonial__btn testimonial__btn--right">
+            <svg class="testimonial__icon">
+              <use xlink:href="images/sprite.svg#icon-circle-right"></use>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section__footer">
+        <footer class="footer">
+            <div class="footer__left">
+                <div class="footer__picture">
+                    <img src="./images/logos/logo-light.png" alt="company-logo">
+                </div>
+                <h3 class="heading heading--h3 footer__text">Explore with Expert.</h3>
+                <div class="footer__copy">
+                    <p> &copy; 2024 design by jay. All rights reserved.</p>
+                </div>
+            </div>
+
+            <div class="footer__right">
+                <div class="footer__nav">
+                    <h3>Quick Links</h3>
+                    <p>Pricing</p>
+                    <p>Services</p>
+                    <p>Why us</p>
+                    <p>Team</p>
+                    <p>Need Help ?</p>
+                </div>
+                <div class="footer__pages">
+                    <h3>Pages</h3>
+                    <a href="">Sign up</a>
+                    <a href="">Sign In</a>
+                    <a href="">Blog</a>
+                    <a href="">Explore Tours</a>
+                </div>
+                <div class="footer__service">
+                    <h3>Service</h3>
+                    <p>Health First</p>
+                    <p>Safety Assured</p>
+                    <p>Stay Connected</p>
+                    <p>Picture Perfect</p>
+                    <p>Stay Charged</p>
+                </div>
+            </div>
+
+        </footer>
+
+    </section>
+
+</body>
+
+</html>

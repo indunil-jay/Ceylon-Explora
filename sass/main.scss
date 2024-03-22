@@ -1,0 +1,29 @@
+@import "abstract/variables";
+@import "abstract/mixin";
+
+@import "base/base";
+@import "base/typography";
+
+@import "components/buttons";
+@import "components/moreNav";
+@import "components/pricing";
+@import "components/services";
+@import "components/whyus";
+@import "components/ourteam";
+@import "components/banner";
+@import "components/testimonial";
+@import "components/connectwithus";
+@import "components/sidebar";
+@import "components/blog";
+
+@import "layouts/header";
+@import "layouts/main";
+@import "layouts/footer";
+
+@import "pages/home";
+@import "pages/signin";
+@import "pages/register";
+@import "pages/about";
+@import "pages/blog";
+@import "pages/tour";
+@import "pages/dashboard";

@@ -1,0 +1,92 @@
+.landing {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 129, 89, 0.6),
+      rgba(40, 223, 153, 0.8)
+    ),
+    url(../../images/locations/colombo.jpg);
+  background-size: cover;
+  background-position: top;
+  align-content: center;
+  display: grid;
+  grid-template-columns:
+    [ full-start] 1fr [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 1fr[full-end];
+
+  @include respond(mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    grid-column: center-start / col-start 6;
+    color: var(--color-primary-50);
+    line-height: var(--line-height-sm);
+
+    @include respond(tab-port) {
+      margin-left: var(--space-md-2);
+      line-height: 1.3;
+    }
+    @include respond(mobile) {
+      margin-left: 0;
+      padding-inline: var(--space-md-2);
+      text-align: center;
+    }
+    // @include respond(mobile-sm) {
+    //   padding-inline: var(--space-md-2);
+    //   text-align: center;
+    // }
+  }
+  &__heading {
+    display: block;
+    &-modifier {
+      background-color: var(--color-yellow-2);
+      padding: 0 var(--space-sm-2);
+    }
+  }
+
+  &__text {
+    margin-block: var(--space-sm-2);
+    @include respond(tab-port) {
+      margin-block: var(--space-sm-1);
+    }
+  }
+  &__btn {
+    display: inline-block;
+    border: 2px solid var(--color-primary-100);
+
+    &:hover {
+      border: 2px solid var(--color-primary-50);
+      font-weight: 500;
+    }
+  }
+}
+
+.blog,
+.our-team,
+.packages,
+.services,
+.testimonial,
+.connect-with-us,
+.why-choose-us {
+  text-align: center;
+
+  &__heading {
+    display: block;
+  }
+
+  &__text {
+    display: block;
+    white-space: break-word;
+
+    @include respond(mobile) {
+      padding: 0px 5rem;
+    }
+  }
+}

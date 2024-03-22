@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
+
+body {
+  font-family: "Geologica", sans-serif;
+  font-weight: 400;
+  line-height: var(--line-height-default);
+  color: var(--color-primary-900);
+}
+
+a {
+  text-decoration: none;
+  font-size: var(--font-default);
+  font-weight: 300;
+  text-transform: capitalize;
+  color: inherit;
+}
+
+.heading {
+  text-transform: capitalize;
+  &--h1 {
+    font-size: var(--font-h1);
+  }
+
+  &--h2 {
+    font-size: var(--font-h2);
+  }
+
+  &--h3 {
+    font-size: var(--font-h3);
+  }
+}
+
+.paragraph {
+  text-transform: none;
+
+  &--p1 {
+    font-size: var(--font-md);
+  }
+
+  &--p2 {
+    font-size: var(--font-sm-1);
+  }
+
+  &--p3 {
+    font-size: var(--font-xsm-1);
+  }
+}
